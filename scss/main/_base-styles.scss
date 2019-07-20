@@ -1,0 +1,129 @@
+p {
+    margin-bottom: $text-margin;
+    line-height: $text-line-height;
+    letter-spacing: $text-letter-spacing;
+
+    > * {
+        line-height: inherit;
+    }
+
+    img {
+        @extend %display--inline-block;
+    }
+}
+
+
+.text--left {
+    @extend %text-align--left;
+}
+
+.text--center {
+    @extend %text-align--center;
+}
+
+.text--justify {
+    @extend %text-align--justify;
+}
+
+.text--right {
+    @extend %text-align--right;
+}
+
+.text--uppercase {
+    @extend %text-transform--uppercase;
+}
+
+.text--line-through {
+    @extend %text-decoration--line-through;
+}
+
+
+a {
+    @extend %color--link-base;
+    color: map-get($colors, 'link-base');
+
+
+    &:hover,
+    &#{$active-selector},
+    #{$active-selector} > & {
+        @extend %color--link-active;
+    }
+
+    &:hover img {
+        opacity: 0.8;
+    }
+}
+
+
+hr {
+    @extend %border--black;
+    margin: $text-margin / 2 0;
+    border-bottom: none;
+}
+
+
+%header {
+    @extend %display--block;
+    @extend %position--relative;
+    @extend %font-weight--bold;
+    margin: 0 0 1em 0;
+    line-height: 1.5em;
+}
+@each $selector, $size in $headers {
+    #{$selector} {
+        @extend %header;
+        font-size: $size;
+    }
+}
+
+
+img {
+    @include transitionAll($transition-time);
+    max-width: 100%;
+    max-height: 100%;
+}
+.image {
+    @extend %display--block;
+    overflow: hidden;
+
+    img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        -o-object-fit: cover;
+    }
+}
+
+
+code,
+kbd,
+pre,
+samp {
+    @extend %display--block;
+    margin: 10px 0;
+    padding: 9.5px;
+    overflow: auto;
+    background-color: #f5f5f5;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.4em;
+    color: #333333;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+
+a,
+input,
+textarea,
+select,
+button,
+.button {
+    @include transitionColor($transition-time);
+
+    img {
+        @include crossStyles('transition', none);
+    }
+}

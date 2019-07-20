@@ -1,0 +1,70 @@
+//display
+@each $value in $display {
+    %display--#{$value} {
+        display: $value;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $value in $display {
+        %display__#{$breakpoint}--#{$value} {
+            @include media-breakpoint($breakpoint, max) {
+                display: $value;
+            }
+        }
+    }
+}
+
+
+//position
+@each $value in $position {
+    %position--#{$value} {
+        position: $value;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $value in $position {
+        %position__#{$breakpoint}--#{$value} {
+            @include media-breakpoint($breakpoint, max) {
+                position: $value;
+            }
+        }
+    }
+}
+
+
+//float
+@each $value in $float {
+    %float--#{$value} {
+        float: $value;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $value in $float {
+        %float__#{$breakpoint}--#{$value} {
+            @include media-breakpoint($breakpoint, max) {
+                float: $value;
+            }
+        }
+    }
+}
+
+
+//visibility
+@each $value in $visibility {
+    %visibility--#{$value} {
+        visibility: $value;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $value in $visibility {
+        %visibility__#{$breakpoint}--#{$value} {
+            @include media-breakpoint($breakpoint, max) {
+                visibility: $value;
+            }
+        }
+    }
+}

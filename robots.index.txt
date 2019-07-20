@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /manager/
+Disallow: /core/
+Disallow: /connectors/
+Disallow: /assets/
+Host: www.sitename.ru

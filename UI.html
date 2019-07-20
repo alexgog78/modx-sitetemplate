@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=1000">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="index.html">
+    <title>Тестовая страница</title>
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+
+    <link href="images/favicon.png" rel="icon" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic"
+          rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/siteScripts.js"></script>
+
+    <!--Стили и скрипты для демонстрации локальной версии (удалить при переносе!!!)-->
+    <script src="js/localScripts.js"></script>
+    <style>
+        .group:not(:last-child) {
+            margin-bottom: 50px;
+            padding: 20px 0 50px;
+            border-bottom: 3px solid #c9c9c9;
+        }
+
+        .coll-example {
+            padding: 10px;
+            overflow: hidden;
+            background-color: #efd3ab;
+            border: 0.5px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body id="testPage">
+
+
+<main class="container">
+    <pre>Заголовки</pre>
+    <section class="group">
+        <h1>Заголовок H1 или .h1</h1>
+        <h2>Заголовок H2 или .h2</h2>
+        <h3>Заголовок H3 или .h3</h3>
+        <h4>Заголовок H4 или .h4</h4>
+        <h5>Заголовок H5 или .h5</h5>
+        <h6>Заголовок H6 или .h6</h6>
+    </section>
+
+
+    <pre>Абзацы</pre>
+    <section class="group">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur.</p>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+            explicabo.</p>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+            dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+            sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
+            magnam aliquam quaerat voluptatem.</p>
+    </section>
+
+
+    <pre>Текстовые элементы</pre>
+    <section class="group">
+        HR-тег
+        <hr>
+        Стилизованный HR-тег
+        <hr class="styled-hr">
+        <p>Расположение текста<sub> нижнее</sub><sup> верхнее</sup></p>
+
+        <p><a href="index.html">Ссылка на страницу</a></p>
+        <p><a href="#modalForm" class="fancy-box">Ссылка на модальное окно</a></p>
+        <p><a href="#testAnchor2" id="testAnchor1">Ссылка на Якорь #1</a></p>
+        <p><a href="#testAnchor1" id="testAnchor2">Ссылка на Якорь #2</a></p>
+
+        <button class="button">Кнопка</button>
+        <button class="button gray">Кнопка</button>
+        <button class="button beige">Кнопка</button>
+        <button class="button transparent">Кнопка</button>
+        <button class="button big">Кнопка</button>
+    </section>
+
+
+    <pre>Списки</pre>
+    <section class="group">
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="styled-list">
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li><a href="#">Lorem ipsum dolor sit amet</a>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor<br>sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                        </ul>
+                    </li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ol class="styled-list">
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li><a href="#">Lorem ipsum dolor sit amet</a>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor<br>sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                        </ul>
+                    </li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Lorem ipsum dolor sit amet</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+
+    <pre>Таблицы</pre>
+    <section class="group">
+        <div class="row">
+            <div class="col-md-6">
+                <table class="styled-table">
+                    <thead>
+                    <tr>
+                        <td colspan="4">Шапка таблицы</td>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                        <td colspan="4">Подвал таблицы</td>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td class="center">Lorem ipsum</td>
+                        <td class="right">Lorem ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td class="center">Lorem ipsum</td>
+                        <td class="right">Lorem ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td class="center">Lorem ipsum</td>
+                        <td class="right">Lorem ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td class="center">Lorem ipsum</td>
+                        <td class="right">Lorem ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td class="center">Lorem ipsum</td>
+                        <td class="right">Lorem ipsum</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <table class="styled-table">
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                        <td>Lorem ipsum</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+    <pre>Сетка</pre>
+    <section class="group">
+        <div class="grid-example row">
+            <div class="col-1">
+                <div class="coll-example odd">.col-1</div>
+            </div>
+            <div class="col-11">
+                <div class="coll-example ">.col-11</div>
+            </div>
+
+            <div class="col-2">
+                <div class="coll-example">.col-2</div>
+            </div>
+            <div class="col-10">
+                <div class="coll-example">.col-10</div>
+            </div>
+
+            <div class="col-3">
+                <div class="coll-example">.col-3</div>
+            </div>
+            <div class="col-9">
+                <div class="coll-example">.col-9</div>
+            </div>
+
+            <div class="col-4">
+                <div class="coll-example">.col-4</div>
+            </div>
+            <div class="col-8">
+                <div class="coll-example">.col-8</div>
+            </div>
+
+            <div class="col-5">
+                <div class="coll-example">.col-5</div>
+            </div>
+            <div class="col-7">
+                <div class="coll-example">.col-7</div>
+            </div>
+
+            <div class="col-6">
+                <div class="coll-example">.col-6</div>
+            </div>
+            <div class="col-6">
+                <div class="coll-example">.col-6</div>
+            </div>
+
+            <div class="col-7">
+                <div class="coll-example">.col-7</div>
+            </div>
+            <div class="col-5">
+                <div class="coll-example">.col-5</div>
+            </div>
+
+            <div class="col-8">
+                <div class="coll-example">.col-8</div>
+            </div>
+            <div class="col-4">
+                <div class="coll-example">.col-4</div>
+            </div>
+
+            <div class="col-9">
+                <div class="coll-example">.col-9</div>
+            </div>
+            <div class="col-3">
+                <div class="coll-example">.col-3</div>
+            </div>
+
+            <div class="col-10">
+                <div class="coll-example">.col-10</div>
+            </div>
+            <div class="col-2">
+                <div class="coll-example">.col-2</div>
+            </div>
+
+            <div class="col-11">
+                <div class="coll-example">.col-11</div>
+            </div>
+            <div class="col-1">
+                <div class="coll-example">.col-1</div>
+            </div>
+
+            <div class="col-12">
+                <div class="coll-example">.col-12</div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="grid-example row nogap">
+            <div class="col-1">
+                <div class="coll-example">.col-1</div>
+            </div>
+            <div class="col-11">
+                <div class="coll-example">.col-11</div>
+            </div>
+
+            <div class="col-2">
+                <div class="coll-example">.col-2</div>
+            </div>
+            <div class="col-10">
+                <div class="coll-example">.col-10</div>
+            </div>
+
+            <div class="col-3">
+                <div class="coll-example">.col-3</div>
+            </div>
+            <div class="col-9">
+                <div class="coll-example">.col-9</div>
+            </div>
+
+            <div class="col-4">
+                <div class="coll-example">.col-4</div>
+            </div>
+            <div class="col-8">
+                <div class="coll-example">.col-8</div>
+            </div>
+
+            <div class="col-5">
+                <div class="coll-example">.col-5</div>
+            </div>
+            <div class="col-7">
+                <div class="coll-example">.col-7</div>
+            </div>
+
+            <div class="col-6">
+                <div class="coll-example">.col-6</div>
+            </div>
+            <div class="col-6">
+                <div class="coll-example">.col-6</div>
+            </div>
+
+            <div class="col-7">
+                <div class="coll-example">.col-7</div>
+            </div>
+            <div class="col-5">
+                <div class="coll-example">.col-5</div>
+            </div>
+
+            <div class="col-8">
+                <div class="coll-example">.col-8</div>
+            </div>
+            <div class="col-4">
+                <div class="coll-example">.col-4</div>
+            </div>
+
+            <div class="col-9">
+                <div class="coll-example">.col-9</div>
+            </div>
+            <div class="col-3">
+                <div class="coll-example">.col-3</div>
+            </div>
+
+            <div class="col-10">
+                <div class="coll-example">.col-10</div>
+            </div>
+            <div class="col-2">
+                <div class="coll-example">.col-2</div>
+            </div>
+
+            <div class="col-11">
+                <div class="coll-example">.col-11</div>
+            </div>
+            <div class="col-1">
+                <div class="coll-example">.col-1</div>
+            </div>
+
+            <div class="col-12">
+                <div class="coll-example">.col-12</div>
+            </div>
+        </div>
+    </section>
+
+
+    <pre>Галерея</pre>
+    <section class="group">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <a href="media/test-1.jpg" class="fancy-image" data-fancybox="gallery" data-caption="Test image 1">
+                <img src="media/test-1.jpg" alt="test">
+            </a>
+            <br>
+            <div class="row">
+                <div class="col-4">
+                    <a href="#error" class="image full fancy-image" data-fancybox="gallery" data-caption="Error test"
+                       style="height: 115px;">
+                        <img src="images/no-photzo.jpg" alt="test-1">
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="media/test-2.jpg" class="image full fancy-image" data-fancybox="gallery"
+                       data-caption="Test image 2" style="height: 115px;">
+                        <img src="media/test-2.jpg" alt="test-2">
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="media/test-3.jpg" class="image full fancy-image" data-fancybox="gallery"
+                       data-caption="Test image 3" style="height: 115px;">
+                        <img src="media/test-3.jpg" alt="test-3">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <pre>Форма</pre>
+    <section class="group">
+        <form class="sky-form validate-form" data-submit-handler="default" style="max-width: 600px; margin: 0 auto;">
+            <fieldset>
+                <div class="header">
+                    Lorem ipsum dolor
+                    <small>Lorem ipsum dolor</small>
+                </div>
+                <div class="row">
+                    <section class="col-6">
+                        <div class="form-input">
+                            <span class="field-title">Имя</span>
+                            <label>
+                                <i class="icon-prepend fa fa-user"></i>
+                                <input type="text" name="name" required>
+                            </label>
+                        </div>
+                        <div class="form-input">
+                            <label>
+                                <i class="icon-prepend fa fa-phone"></i>
+                                <input type="text" name="phone" placeholder="Телефон">
+                            </label>
+                        </div>
+                    </section>
+                    <section class="col-6">
+                        <div class="form-input">
+                            <span class="field-title">E-Mail</span>
+                            <label>
+                                <i class="icon-prepend fa fa-envelope-o"></i>
+                                <input type="email" name="email" required>
+                            </label>
+                        </div>
+                        <div class="form-input">
+                            <label>
+                                <i class="icon-prepend fa fa-times"></i>
+                                <input type="text" name="login" placeholder="Недоступное поле" disabled>
+                            </label>
+                        </div>
+                    </section>
+                </div>
+            </fieldset>
+            <fieldset>
+                <section class="row">
+                    <div class="form-input col-6">
+                        <span class="field-title">Файл</span>
+                        <label class="file">
+                            <div class="upload"><input type="file"
+                                                       onchange="this.parentNode.nextSibling.value = this.value">Browse
+                            </div>
+                            <input type="text" readonly>
+                        </label>
+                    </div>
+                    <div class="form-input col-6">
+                        <span class="field-title">Выбор Select</span>
+                        <label class="select">
+                            <i class="icon-prepend fa fa-arrows-v"></i>
+                            <select name="select">
+                                <option>Выбор...</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                            </select>
+                        </label>
+                    </div>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section>
+                    <span class="field-title">Число</span>
+                    <label class="number">
+                        <i class="icon-prepend fa fa-calculator"></i>
+                        <input type="number" name="number" value="0" min="-2" max="2">
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <section class="form-input">
+                    <span class="field-title">Текст вашего сообщения</span>
+                    <label>
+                        <i class="icon-prepend fa fa-comment"></i>
+                        <textarea rows="7" name="message" minlength="10"></textarea>
+                    </label>
+                </section>
+            </fieldset>
+            <fieldset>
+                <div class="row">
+                    <section class="col-6">
+                        <span class="field-title">Переключатели Radio</span>
+                        <label class="form-input radio">
+                            <input type="radio" name="radio" checked><i></i>Radio 1
+                        </label>
+                        <label class="form-input radio">
+                            <input type="radio" name="radio" disabled><i></i>Недоступный Radio
+                        </label>
+                        <label class="form-input radio">
+                            <input type="radio" name="radio"><i></i>Radio 3
+                        </label>
+                        <label class="form-input radio">
+                            <input type="radio" name="radio"><i></i>Radio 4
+                        </label>
+                        <label class="form-input radio">
+                            <input type="radio" name="radio"><i></i>Radio 5
+                        </label>
+                    </section>
+                    <section class="col-6">
+                        <span class="field-title">Переключатели Checkbox</span>
+                        <label class="form-input checkbox">
+                            <input type="checkbox" name="checkbox" checked><i></i>Checkbox 1
+                        </label>
+                        <label class="form-input checkbox">
+                            <input type="checkbox" name="checkbox" disabled><i></i>Недоступный Checkbox
+                        </label>
+                        <label class="form-input checkbox">
+                            <input type="checkbox" name="checkbox" checked><i></i>Checkbox 3
+                        </label>
+                        <label class="form-input checkbox">
+                            <input type="checkbox" name="checkbox"><i></i>Checkbox 4
+                        </label>
+                        <label class="form-input checkbox">
+                            <input type="checkbox" name="checkbox"><i></i>Checkbox 5
+                        </label>
+                    </section>
+                </div>
+                <div class="footer">
+                    <input type="submit" value="Submit" class="form-button">
+                    <br>
+                    <button type="submit" class="form-button">Button</button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+</main>
+
+
+</body>
+</html>

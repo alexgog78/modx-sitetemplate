@@ -1,0 +1,103 @@
+.visible {
+    display: block !important;
+}
+
+table.visible {
+    display: table !important;
+}
+
+tr.visible {
+    display: table-row !important;
+}
+
+td.visible, th.visible {
+    display: table-cell !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+//Large screen
+@media (max-width: map-get($grid-breakpoints, xl)-1) {
+    .visible-lg {
+        display: block !important;
+    }
+    table.visible-lg {
+        display: table !important;
+    }
+    tr.visible-lg {
+        display: table-row !important;
+    }
+    td.visible-lg, th.visible-lg {
+        display: table-cell !important;
+    }
+
+    .hidden-lg {
+        display: none !important;
+    }
+}
+
+
+//Medium screen
+@media (max-width: map-get($grid-breakpoints, lg)-1) {
+    .visible-md {
+        display: block !important;
+    }
+    table.visible-md {
+        display: table !important;
+    }
+    tr.visible-md {
+        display: table-row !important;
+    }
+    td.visible-md, th.visible-md {
+        display: table-cell !important;
+    }
+
+    .hidden-md {
+        display: none !important;
+    }
+}
+
+
+//Small screen
+@media (max-width: map-get($grid-breakpoints, md)-1) {
+    .visible-sm {
+        display: block !important;
+    }
+    table.visible-sm {
+        display: table !important;
+    }
+    tr.visible-sm {
+        display: table-row !important;
+    }
+    td.visible-sm, th.visible-sm {
+        display: table-cell !important;
+    }
+
+    .hidden-sm {
+        display: none !important;
+    }
+}
+
+
+//Extra small screen
+@media (max-width: map-get($grid-breakpoints, sm)-1) {
+    .visible-xs {
+        display: block !important;
+    }
+    table.visible-xs {
+        display: table !important;
+    }
+    tr.visible-xs {
+        display: table-row !important;
+    }
+    td.visible-xs, th.visible-xs {
+        display: table-cell !important;
+    }
+
+    .hidden-xs {
+        display: none !important;
+    }
+}

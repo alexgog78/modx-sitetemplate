@@ -1,0 +1,124 @@
+//font-family
+@each $value in $font-family {
+    %font-family--#{$value} {
+        font-family: $value;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $value in $font-family {
+        %font-family__#{$breakpoint}--#{$value} {
+            @include media-breakpoint($breakpoint, max) {
+                font-family: $value;
+            }
+        }
+    }
+}
+
+
+//font-size
+@each $key, $value in $font-size-converter {
+    %font-size--#{$key} {
+        font-size: $value;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $key, $value in $font-size-converter {
+        %font-size__#{$breakpoint}--#{$key} {
+            @include media-breakpoint($breakpoint, max) {
+                font-size: $value;
+            }
+        }
+    }
+}
+
+
+//font-weight
+@each $key, $value in $font-weights {
+    %font-weight--#{$key} {
+        font-weight: $value;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $key, $value in $font-weights {
+        %font-weight__#{$breakpoint}--#{$key} {
+            @include media-breakpoint($breakpoint, max) {
+                font-weight: $value;
+            }
+        }
+    }
+}
+
+
+//text-align
+@each $value in $text-align {
+    %text-align--#{$value} {
+        text-align: $value;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $value in $text-align {
+        %text-align__#{$breakpoint}--#{$value} {
+            @include media-breakpoint($breakpoint, max) {
+                text-align: $value;
+            }
+        }
+    }
+}
+
+
+//text-decoration
+@each $value in $text-decoration {
+    %text-decoration--#{$value} {
+        text-decoration: $value;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $value in $text-decoration {
+        %text-decoration__#{$breakpoint}--#{$value} {
+            @include media-breakpoint($breakpoint, max) {
+                text-decoration: $value;
+            }
+        }
+    }
+}
+
+
+//text-transform
+@each $value in $text-transform {
+    %text-transform--#{$value} {
+        text-transform: $value;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $value in $text-transform {
+        %text-transform__#{$breakpoint}--#{$value} {
+            @include media-breakpoint($breakpoint, max) {
+                text-transform: $value;
+            }
+        }
+    }
+}
+
+
+//color
+@each $key, $value in $colors {
+    %color--#{$key} {
+        color: $value;
+    }
+}
+
+@each $breakpoint, $width in $grid-breakpoints {
+    @each $key, $value in $colors {
+        %color__#{$breakpoint}--#{$key} {
+            @include media-breakpoint($breakpoint, max) {
+                color: $value;
+            }
+        }
+    }
+}

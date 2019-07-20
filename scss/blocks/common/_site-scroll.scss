@@ -1,0 +1,18 @@
+.site-scroll {
+    @extend %display--none;
+    @extend %position--fixed;
+    @extend %background--link-base;
+    z-index: 990;
+    right: 20px; bottom: 20px;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+
+    &:before {
+        @extend %display--flex;
+        @extend %position--absolute;
+        @extend %color--white;
+        content: '▲';
+        top: 0; right: 0; bottom: 0; left: 0;
+        justify-content: center; align-items: center;
+    }
+}

@@ -1,0 +1,79 @@
+$display: none, block, inline-block, flex, inline-flex, table;
+$position: fixed, absolute, relative, static;
+$float: left, right;
+$visibility: hidden, visible, collapse;
+$text-align: left, right, center, justify;
+$text-decoration: underline, none, line-through;
+$text-transform: capitalize, uppercase, lowercase;
+$transition-time: 300ms;
+
+
+$wrapper-max-width: 1170px;
+$wrapper-min-width: 320px;
+$wrapper-padding: 15;
+
+
+$font-family: PFHighwaySansPro, Staromoskovsky, Pragmatica;
+$font-family-default: 'PFHighwaySansPro', sans-serif;
+$font-weight: 400;
+$font-sizes: (
+    desktop: 16px,
+    tablet: 16px,
+    phone: 16px
+);
+$font-weights: (
+        'thin': 100,
+        'extra-light': 200,
+        'light': 300,
+        'regular': 400,
+        'medium': 500,
+        'semi-bold': 600,
+        'bold': 700,
+        'extra-bold': 800,
+        'black': 900
+);
+$font-size-converter: (
+        16: 1rem,
+);
+
+
+$letter-spacing: 0em;
+$active-selector: '.active';
+$text-line-height: 1.6em;
+$text-letter-spacing: 0em;
+$text-margin: 1.63em;
+
+
+$headers: (
+    'h1, .h1': 2rem,
+    'h2, .h2': 1.8rem,
+    'h3, .h3': 1.6rem,
+    'h4, .h4': 1.4rem,
+    'h5, .h5': 1.2rem,
+    'h6, .h6': 1rem
+);
+
+
+$grid-columns: 12;
+$grid-gap: 30px;
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+
+$colors: (
+    'body-background': #ffffff,
+    'font-base': black,
+    'link-base': blue,
+    'link-active': red,
+    'black': #000000,
+    'white': #ffffff,
+    'grey': #f4f4f4,
+    'transparent': transparent,
+    'success': green,
+    'error': red,
+);

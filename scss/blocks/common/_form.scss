@@ -1,0 +1,29 @@
+.form {
+    &__title {
+
+    }
+
+    &__comment {
+
+    }
+
+    &__fieldset {
+
+    }
+
+    &__section {
+
+    }
+
+    &__input {
+        @extend  %position--relative;
+    }
+
+    &__input-field {
+         appearance: normal; -moz-appearance: none; -webkit-appearance: none;
+        width: 100%;
+        height: pxToRem(42);
+        border: 2px solid rgba(161, 152, 130, 0.14);
+        padding: 0 pxToRem(15);
+    }
+}

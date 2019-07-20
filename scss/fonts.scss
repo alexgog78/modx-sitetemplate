@@ -1,0 +1,76 @@
+/*
+    Font files:
+        ttf
+        svg
+        eot
+        woff
+        woff2
+    
+    
+    Font weight:
+        100        Extra Thin, Ultra Thin, Hairline, Ultra Light
+        200        Thin
+        300        Light, Book, Demi
+        400        Regular, Normal
+        500        Medium
+        600        Semibold, Demibold
+        700        Bold
+        800        Black, Extra Bold, Heavy
+        900        Extra Black, Fat, Poster, Ultra Black, Heavy
+*/
+
+
+//Подключение шрифта
+@function strReplace($string, $search, $replace:'') {
+    $index: str-index($string, $search);
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + strReplace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
+
+$fontsFolder: '../fonts/';
+@mixin getFont($fontFace, $path, $style, $weight) {
+    $path: $fontsFolder+$path;
+
+    font-family: $fontFace;
+    font-style: $style;
+    font-weight: $weight;
+    src: url('#{$path}.eot') format("eot"), url('#{$path}.woff2') format('woff2'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg#' + strReplace($fontFace, ' ', '_')) format('svg');
+}
+
+
+$fontFolder: 'PFHighwaySansPro';
+$fileFile: 'PFHighwaySansPro';
+$fontFace: 'PFHighwaySansPro';
+$fontArray: (
+        '100 thin': (
+                weight: 100, files: (
+                        normal: '#{$fileFile}--thin'
+                )
+        ), '400 regular': (
+                weight: 400, files: (
+                        normal: '#{$fileFile}--regular'
+                )
+        ), '500 medium': (
+                weight: 500, files: (
+                        normal: '#{$fileFile}--medium'
+                )
+        ), '700 bold': (
+                weight: 700, files: (
+                        normal: '#{$fileFile}--bold'
+                )
+        )
+);
+@each $folder, $fonts in $fontArray {
+    $weight: map-get($fonts, weight);
+    $styles: map-get($fonts, files);
+
+    @each $style, $file in $styles {
+        @font-face {
+            $folder: $fontFolder+'/'+$folder+'/'+$file;
+
+            @include getFont($fontFace, $folder, $style, $weight);
+        }
+    }
+}
