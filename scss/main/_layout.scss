@@ -5,11 +5,11 @@ html {
     font-size: map-get($font-sizes, desktop);
     letter-spacing: $letter-spacing;
 
-    @include media-breakpoint(lg, max) {
+    @include mediaBreakpoint(lg, max) {
         font-size: map-get($font-sizes, tablet);
     }
 
-    @include media-breakpoint(md, max) {
+    @include mediaBreakpoint(md, max) {
         font-size: map-get($font-sizes, phone);
     }
 }

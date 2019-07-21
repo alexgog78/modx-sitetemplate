@@ -39,7 +39,7 @@
         @extend %grid-column;
     }
 
-    @include media-breakpoint($breakpoint) {
+    @include mediaBreakpoint($breakpoint) {
         //Provide basic `.col-{bp}` classes for equal-width flexbox columns
         .col#{$infix} {
             flex-basis: 0;

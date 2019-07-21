@@ -4,11 +4,10 @@
         font-family: $value;
     }
 }
-
 @each $breakpoint, $width in $grid-breakpoints {
     @each $value in $font-family {
         %font-family__#{$breakpoint}--#{$value} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 font-family: $value;
             }
         }
@@ -22,11 +21,10 @@
         font-size: $value;
     }
 }
-
 @each $breakpoint, $width in $grid-breakpoints {
     @each $key, $value in $font-size-converter {
         %font-size__#{$breakpoint}--#{$key} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 font-size: $value;
             }
         }
@@ -40,11 +38,10 @@
         font-weight: $value;
     }
 }
-
 @each $breakpoint, $width in $grid-breakpoints {
     @each $key, $value in $font-weights {
         %font-weight__#{$breakpoint}--#{$key} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 font-weight: $value;
             }
         }
@@ -58,11 +55,10 @@
         text-align: $value;
     }
 }
-
 @each $breakpoint, $width in $grid-breakpoints {
     @each $value in $text-align {
         %text-align__#{$breakpoint}--#{$value} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 text-align: $value;
             }
         }
@@ -76,11 +72,10 @@
         text-decoration: $value;
     }
 }
-
 @each $breakpoint, $width in $grid-breakpoints {
     @each $value in $text-decoration {
         %text-decoration__#{$breakpoint}--#{$value} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 text-decoration: $value;
             }
         }
@@ -94,11 +89,10 @@
         text-transform: $value;
     }
 }
-
 @each $breakpoint, $width in $grid-breakpoints {
     @each $value in $text-transform {
         %text-transform__#{$breakpoint}--#{$value} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 text-transform: $value;
             }
         }
@@ -112,11 +106,10 @@
         color: $value;
     }
 }
-
 @each $breakpoint, $width in $grid-breakpoints {
     @each $key, $value in $colors {
         %color__#{$breakpoint}--#{$key} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 color: $value;
             }
         }

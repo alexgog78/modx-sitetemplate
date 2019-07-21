@@ -1,14 +1,13 @@
-//background color
+//background-color
 @each $key, $value in $colors {
     %background--#{$key} {
         background-color: $value;
     }
 }
-
 @each $breakpoint, $width in $grid-breakpoints {
     @each $key, $value in $colors {
         %background__#{$breakpoint}--#{$key} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 background-color: $value;
             }
         }
@@ -37,35 +36,34 @@
         border-left: 1px solid $value;
     }
 }
-
 @each $breakpoint, $width in $grid-breakpoints {
     @each $key, $value in $colors {
         %border__#{$breakpoint}--#{$key} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 border: 1px solid $value;
             }
         }
 
         %border-top__#{$breakpoint}--#{$key} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 border-top: 1px solid $value;
             }
         }
 
         %border-right__#{$breakpoint}--#{$key} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 border-right: 1px solid $value;
             }
         }
 
         %border-bottom__#{$breakpoint}--#{$key} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 border-bottom: 1px solid $value;
             }
         }
 
         %border-left__#{$breakpoint}--#{$key} {
-            @include media-breakpoint($breakpoint, max) {
+            @include mediaBreakpoint($breakpoint, max) {
                 border-left: 1px solid $value;
             }
         }

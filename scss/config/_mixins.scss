@@ -1,5 +1,5 @@
 //Media запрос
-@mixin media-breakpoint($breakpoint, $type: min, $grid-breakpoints: $grid-breakpoints) {
+@mixin mediaBreakpoint($breakpoint, $type: min, $grid-breakpoints: $grid-breakpoints) {
     $width: map-get($grid-breakpoints, $breakpoint);
     $width: if($width != 0, $width, null);
 
