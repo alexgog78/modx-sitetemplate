@@ -1,33 +1,36 @@
+/*
+Font files:
+    eot
+    woff
+    woff2
+    ttf
+    svg
+Font weight:
+    100   Extra Thin, Ultra Thin, Hairline, Ultra Light
+    200   Thin
+    300   Light, Book, Demi
+    400   Regular, Normal
+    500   Medium
+    600   Semibold, Demibold
+    700   Bold
+    800   Black, Extra Bold, Heavy
+    900   Extra Black, Fat, Poster, Ultra Black, Heavy
+
 $font-families: (
-    'MyriadPro': (
-        baseFolder: 'MyriadPro',
-        baseFile: 'MyriadPro',
-        fontFace: 'Myriad Pro',
+    'Index': (
+        baseFolder: 'font_folder',
+        baseFile: 'font_file_key',
+        fontFace: 'font_family',
         weights: (
             'regular': (
                 weight: 400,
                 styles: (normal, italic)
             ),
-            'bold': (
-                weight: 700,
-                styles: (normal, italic)
-            )
         )
     ),
+);
+*/
 
-    'HelveticaNeueCyr': (
-        baseFolder: 'HelveticaNeueCyr',
-        baseFile: 'HelveticaNeueCyr',
-        fontFace: 'Helvetica Neue Cyr',
-        weights: (
-            'regular': (
-                weight: 400,
-                styles: (normal, italic)
-            ),
-            'bold': (
-                weight: 700,
-                styles: (normal, italic)
-            )
-        )
-    )
+$font-families: (
+
 );

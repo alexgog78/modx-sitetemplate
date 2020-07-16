@@ -35,7 +35,7 @@
 </head>
 <body class="page page--resource-{$_modx->resource.id}">
     <header class="page__header header">
-
+        {$_modx->resource.pagetitle}
     </header>
 
     <main class="page__main">
@@ -43,7 +43,7 @@
     </main>
 
     <footer class="page__footer header">
-
+        {'' | date : 'Y'} {$_modx->config.site_name}
     </footer>
 
     {if $_modx->getPlaceholder('+dev_mode')}
