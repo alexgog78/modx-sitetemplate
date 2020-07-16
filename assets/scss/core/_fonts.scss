@@ -1,0 +1,35 @@
+//Font files:
+//    eot
+//    woff
+//    woff2
+//    ttf
+//    svg
+//Font weight:
+//    100   Extra Thin, Ultra Thin, Hairline, Ultra Light
+//    200   Thin
+//    300   Light, Book, Demi
+//    400   Regular, Normal
+//    500   Medium
+//    600   Semibold, Demibold
+//    700   Bold
+//    800   Black, Extra Bold, Heavy
+//    900   Extra Black, Fat, Poster, Ultra Black, Heavy
+
+@import 'config/variables';
+@import 'config/mixins';
+
+@each $key, $font in $font-families {
+    $baseFolder: map-get($font, baseFolder);
+    $baseFile: map-get($font, baseFile);
+    $fontFace: map-get($font, fontFace);
+    $fontId: map-get($font, baseFile);
+
+    @each $weightKey, $fontWeightData in map-get($font, weights) {
+        $weight: map-get($fontWeightData, weight);
+
+        @each $style in map-get($fontWeightData, styles) {
+            $path: $fonts-folder + $baseFolder + '/' + $weight + ' ' + $weightKey + '/' + $baseFile + '--' + $style;
+            @include font-face($fontFace, $path, $style, $weight, $fontId);
+        }
+    }
+}

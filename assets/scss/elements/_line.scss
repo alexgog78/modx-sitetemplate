@@ -1,0 +1,10 @@
+%line {
+    @extend %border--black;
+    margin-top: .75em;
+    margin-bottom: .75em;
+    border-bottom: none;
+}
+
+.line {
+    @extend %line;
+}

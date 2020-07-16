@@ -1,0 +1,11 @@
+%input-textarea {
+    @extend %input-text;
+    height: auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    resize: none;
+}
+
+.input-textarea {
+    @extend %input-textarea;
+}

@@ -1,0 +1,29 @@
+%list {
+    line-height: 1.5em;
+    list-style: none;
+    counter-reset: li;
+
+    &--ul {
+        list-style: disc;
+        margin-left: 1rem;
+    }
+
+    &--ol {
+        li::before {
+            counter-increment: li;
+            content: counter(li)'.';
+        }
+    }
+}
+
+.list {
+    @extend %list;
+
+    &--ul {
+        @extend %list--ul;
+    }
+
+    &--ol {
+        @extend %list--ol;
+    }
+}

@@ -1,0 +1,16 @@
+%button {
+    @extend %display--inline-flex;
+    @include transition();
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+
+    }
+}
+
+.button {
+    @extend %button;
+}

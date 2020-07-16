@@ -1,0 +1,18 @@
+%link {
+    @extend %color--#{$link__color};
+    @include transition-color();
+
+    &:hover {
+        @extend %color--#{$link__color--active};
+    }
+
+    &:hover img {
+        opacity: 0.8;
+    }
+}
+
+.link {
+    @extend %link;
+}
+
+

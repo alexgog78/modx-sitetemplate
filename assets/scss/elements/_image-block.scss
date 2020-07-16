@@ -1,0 +1,25 @@
+%image-block {
+    @extend %display--flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+        @extend %image;
+        object-fit: contain;
+    }
+
+    &--full img {
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+}
+
+.image-block {
+    @extend %image-block;
+
+    &--full {
+        @extend %image-block--full;
+    }
+}

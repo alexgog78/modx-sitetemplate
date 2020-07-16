@@ -3,4 +3,4 @@ Disallow: /manager/
 Disallow: /core/
 Disallow: /connectors/
 Disallow: /assets/
-Host: www.sitename.ru
+Host: sitename.ru

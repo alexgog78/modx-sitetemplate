@@ -1,0 +1,13 @@
+%container {
+    width: 100%;
+    max-width: $container__max-width;
+    min-width: $container__min-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $container__padding;
+    padding-left: $container__padding;
+}
+
+.container {
+    @extend %container;
+}

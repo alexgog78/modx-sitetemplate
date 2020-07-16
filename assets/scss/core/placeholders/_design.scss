@@ -1,0 +1,71 @@
+//background-color
+@each $key, $value in $colors {
+    %background--#{$key} {
+        background-color: $value;
+    }
+}
+@each $breakpoints, $width in $breakpoints {
+    @each $key, $value in $colors {
+        %background__#{$breakpoints}--#{$key} {
+            @include media-breakpoint($breakpoints) {
+                background-color: $value;
+            }
+        }
+    }
+}
+
+//border
+@each $key, $value in $colors {
+    %border--#{$key} {
+        border: 1px solid $value;
+    }
+
+    %border-top--#{$key} {
+        border-top: 1px solid $value;
+    }
+
+    %border-right--#{$key} {
+        border-right: 1px solid $value;
+    }
+
+    %border-bottom--#{$key} {
+        border-bottom: 1px solid $value;
+    }
+
+    %border-left--#{$key} {
+        border-left: 1px solid $value;
+    }
+}
+@each $breakpoints, $width in $breakpoints {
+    @each $key, $value in $colors {
+        %border__#{$breakpoints}--#{$key} {
+            @include media-breakpoint($breakpoints) {
+                border: 1px solid $value;
+            }
+        }
+
+        %border-top__#{$breakpoints}--#{$key} {
+            @include media-breakpoint($breakpoints) {
+                border-top: 1px solid $value;
+            }
+        }
+
+        %border-right__#{$breakpoints}--#{$key} {
+            @include media-breakpoint($breakpoints) {
+                border-right: 1px solid $value;
+            }
+        }
+
+        %border-bottom__#{$breakpoints}--#{$key} {
+            @include media-breakpoint($breakpoints) {
+                border-bottom: 1px solid $value;
+            }
+        }
+
+        %border-left__#{$breakpoints}--#{$key} {
+            @include media-breakpoint($breakpoints) {
+                border-left: 1px solid $value;
+            }
+        }
+    }
+}

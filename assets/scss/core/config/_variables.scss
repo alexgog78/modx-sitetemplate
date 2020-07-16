@@ -1,0 +1,86 @@
+$display: none, block, inline-block, flex, inline-flex, grid, inline-grid, table, inline-table, table-row, table-cell, list-item !default;
+$position: absolute, fixed, relative, static !default;
+$float: left, right, none !default;
+$visibility: hidden, visible, collapse !default;
+$text-align: left, right, center, justify !default;
+$text-decoration: line-through, overline, underline, none !default;
+$text-transform: capitalize, uppercase, lowercase, none !default;
+$font-style: normal, italic, oblique !default;
+
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+) !default;
+
+$fonts-folder: '../fonts/' !default;
+
+$font-families: (
+    OpenSans: 'Open Sans',
+    PTSans: 'PT Sans',
+) !default;
+
+$font-weights: (
+    'thin': 100,
+    'extra-light': 200,
+    'light': 300,
+    'regular': 400,
+    'medium': 500,
+    'semi-bold': 600,
+    'bold': 700,
+    'extra-bold': 800,
+    'black': 900,
+) !default;
+
+$font-sizes: (
+    8: .5rem,
+    12: .75rem,
+    16: 1rem,
+    20: 1.25rem,
+    24: 1.5rem,
+    28: 1.75rem,
+    32: 2rem,
+    36: 2.25rem,
+) !default;
+
+$colors: (
+    'black': #000000,
+    'white': #ffffff,
+    'grey': #aaaaaa,
+    'transparent': transparent,
+    'success': #00ff00,
+    'error': #ff0000,
+) !default;
+
+$default__transition-time: 200ms !default;
+$default__font-family: 'OpenSans' !default;
+$default__font-weight: 'regular' !default;
+$default__color: 'black' !default;
+$default__letter-spacing: 0em !default;
+$default__font-sizes: (
+    xs: 16px,
+    sm: 16px,
+    md: 16px,
+    lg: 16px,
+    xl: 16px,
+) !default;
+
+$heading__font-sizes: (
+    1: 36,
+    2: 32,
+    3: 28,
+    4: 24,
+    5: 20,
+    6: 16,
+) !default;
+
+$body__background: 'white' !default;
+
+$container__max-width: 1200px !default;
+$container__min-width: 320px !default;
+$container__padding: 15px !default;
+
+$link__color: 'success' !default;
+$link__color--active: 'error' !default;

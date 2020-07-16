@@ -1,0 +1,8 @@
+%image {
+    @include transition();
+    max-height: 100%;
+}
+
+.image {
+    @extend %image;
+}

@@ -1,0 +1,15 @@
+%paragraph {
+    line-height: 1.2em;
+
+    > * {
+        line-height: inherit;
+    }
+
+    img {
+        @extend %display--inline-block;
+    }
+}
+
+.paragraph {
+    @extend %paragraph;
+}

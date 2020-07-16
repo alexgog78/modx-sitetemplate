@@ -1,0 +1,33 @@
+$font-families: (
+    'MyriadPro': (
+        baseFolder: 'MyriadPro',
+        baseFile: 'MyriadPro',
+        fontFace: 'Myriad Pro',
+        weights: (
+            'regular': (
+                weight: 400,
+                styles: (normal, italic)
+            ),
+            'bold': (
+                weight: 700,
+                styles: (normal, italic)
+            )
+        )
+    ),
+
+    'HelveticaNeueCyr': (
+        baseFolder: 'HelveticaNeueCyr',
+        baseFile: 'HelveticaNeueCyr',
+        fontFace: 'Helvetica Neue Cyr',
+        weights: (
+            'regular': (
+                weight: 400,
+                styles: (normal, italic)
+            ),
+            'bold': (
+                weight: 700,
+                styles: (normal, italic)
+            )
+        )
+    )
+);
