@@ -1,0 +1,20 @@
+@each $value in $text-transform {
+    %text-transform--#{$value} {
+        text-transform: $value;
+    }
+}
+@each $breakpoints, $width in $breakpoints {
+    @each $value in $text-transform {
+        %text-transform__#{$breakpoints}-max--#{$value} {
+            @include media-breakpoint($breakpoints, max) {
+                text-transform: $value;
+            }
+        }
+
+        %text-transform__#{$breakpoints}-min--#{$value} {
+            @include media-breakpoint($breakpoints, min) {
+                text-transform: $value;
+            }
+        }
+    }
+}

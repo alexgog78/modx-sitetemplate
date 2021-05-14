@@ -1,0 +1,14 @@
+@mixin font-face($face, $path, $style, $weight, $id: '') {
+    @font-face {
+        font-family: $face;
+        font-style: $style;
+        font-weight: $weight;
+        src:
+            url('#{$path}.eot') format('eot'),
+            url('#{$path}.woff') format('woff'),
+            url('#{$path}.woff2') format('woff2'),
+            url('#{$path}.ttf') format('truetype'),
+            url('#{$path}.svg#' + #{$id}) format('svg');
+        font-display: swap
+    }
+}

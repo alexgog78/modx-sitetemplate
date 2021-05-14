@@ -1,5 +1,33 @@
 %input-text {
+    @extend %border--black;
+    @include transition--color;
+    height: 3rem;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
 
+    &::placeholder {
+        @extend %color--black;
+    }
+
+    &:focus,
+    &.active {
+        border-color: map-get($colors, 'success');
+    }
+
+    &.error {
+        border-color: map-get($colors, 'error');
+
+        &::placeholder {
+            @extend %color--error;
+        }
+    }
+
+    + em.error {
+        @extend %display--inline-block;
+        @extend %color--error;
+        margin-top: .25rem;
+    }
 }
 
 .input-text {

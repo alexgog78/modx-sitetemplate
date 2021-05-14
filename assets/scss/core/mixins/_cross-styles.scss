@@ -1,0 +1,7 @@
+@mixin cross-styles($style, $value) {
+    #{$style}: #{$value};
+    -o-#{$style}: #{$value};
+    -moz-#{$style}: #{$value};
+    -ms-#{$style}: #{$value};
+    -webkit-#{$style}: #{$value};
+}

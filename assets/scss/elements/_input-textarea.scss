@@ -1,6 +1,7 @@
 %input-textarea {
     @extend %input-text;
     height: auto;
+    min-height: 3rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
     resize: none;

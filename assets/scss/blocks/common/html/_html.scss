@@ -1,0 +1,23 @@
+html {
+    @extend %font-weight--#{$default__font-weight};
+    @extend %color--#{$default__color};
+    font-family: map-get($font-families, $default__font-family), sans-serif;
+    font-size: 1.3vw;
+    letter-spacing: $default__letter-spacing;
+
+    @media (max-width: 1076px) {
+        font-size: $default__font-size--min;
+    }
+
+    @media (min-width: $container__max-width) {
+        font-size: $default__font-size;
+    }
+
+    .js-loading {
+        @extend %background-color--grey;
+
+        > * {
+            opacity: 0;
+        }
+    }
+}

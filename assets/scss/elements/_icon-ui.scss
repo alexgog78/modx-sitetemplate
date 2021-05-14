@@ -1,0 +1,10 @@
+%icon-ui {
+    @extend %display--inline-block;
+    @include transition--color;
+    stroke: map-get($colors, 'text');
+    fill: none;
+}
+
+.icon-ui {
+    @extend %icon-ui;
+}

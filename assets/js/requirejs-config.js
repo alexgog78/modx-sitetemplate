@@ -1,7 +1,7 @@
 'use strict';
 
 var require = {
-    baseUrl: 'assets/js',
+    waitSeconds : 30,
     widgetsUrl: 'widgets',
     paths: {
         'underscore': 'core/underscore',

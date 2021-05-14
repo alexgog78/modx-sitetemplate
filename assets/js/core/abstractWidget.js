@@ -4,34 +4,61 @@ define([
     'use strict';
 
     $.widget('widgets.abstract', {
-        cssLinks: [],
+        cssFiles: [],
         options: {},
+        loadingClass: 'js-loading',
+        cssUrl: requirejs.s.contexts._.config.cssUrl + '/',
+        cssUrlArgs: requirejs.s.contexts._.config.urlArgs('', ''),
 
         _create: function () {
-            var widget = this;
-            if (window.debug) {
-                console.log(widget.widgetFullName, widget.element, widget.options);
-            }
-            widget.cssLinks.forEach(function (href) {
-                widget._addCss(href);
-            });
-            widget._super();
+            this._debug([this.element[0], this.options])
+            this._addCss();
+            this._run();
+            this._setLoaded();
+            this._super();
         },
 
-        _addCss: function (href) {
-            var widget = this;
-            var urlArgs = requirejs.s.contexts._.config.urlArgs('', '');
-            var selector = widget.namespace + '/' + widget.widgetName;
-            if (document.querySelectorAll('link[data-requiremodule="' + selector + '"]').length) {
+        _run: function () {
+        },
+
+        _debug: function (data) {
+            if (!window.debug) {
                 return;
             }
-            var widgetLink = document.querySelectorAll('script[data-requiremodule="' + selector + '"]');
-            var link = document.createElement('link');
+            console.log(this.widgetFullName, data);
+        },
+
+        _setLoaded: function () {
+            this.element.removeClass(this.loadingClass);
+        },
+
+        _addCss: function () {
+            let widget = this;
+            this.cssFiles.forEach(function (file) {
+                widget._addCssLink(file);
+            });
+        },
+
+        _addCssLink: function (file) {
+            let jsSelector = this.namespace + '/' + this.widgetName;
+            let cssSelector = 'css/' + file;
+            if (document.querySelectorAll('link[data-requiremodule="' + cssSelector + '"]').length) {
+                return;
+            }
+
+            let preload = document.createElement('link');
+            preload.rel = 'preload';
+            preload.as = 'style';
+            preload.href = this.cssUrl + file + '.css' + this.cssUrlArgs;
+            document.getElementsByTagName('head')[0].prepend(preload);
+
+            let widgetLink = document.querySelectorAll('script[data-requiremodule="' + jsSelector + '"]');
+            let link = document.createElement('link');
             link.type = 'text/css';
             link.rel = 'stylesheet';
-            link.dataset.requiremodule = selector;
-            link.href = href + urlArgs;
+            link.dataset.requiremodule = cssSelector;
+            link.href = this.cssUrl + file + '.css' + this.cssUrlArgs;
             document.getElementsByTagName('head')[0].insertBefore(link, widgetLink[0].nextSibling);
-        }
+        },
     });
 });

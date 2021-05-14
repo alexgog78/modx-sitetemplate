@@ -1,8 +1,11 @@
 %button {
     @extend %display--inline-flex;
-    @include transition();
+    @include transition;
     align-items: center;
     justify-content: center;
+    height: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     white-space: nowrap;
     cursor: pointer;
 
@@ -11,6 +14,22 @@
     }
 }
 
+%button--big {
+    height: 2.5rem;
+}
+
+%button--small {
+    height: 1.5rem;
+}
+
 .button {
     @extend %button;
+
+    &--big {
+        @extend %button--big;
+    }
+
+    &--small {
+        @extend %button--small;
+    }
 }

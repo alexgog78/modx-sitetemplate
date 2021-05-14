@@ -1,5 +1,5 @@
 @import 'config/variables';
-@import 'config/mixins';
+@import 'mixins/font-face';
 
 @each $key, $font in $font-families {
     $baseFolder: map-get($font, baseFolder);

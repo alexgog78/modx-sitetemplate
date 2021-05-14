@@ -8,8 +8,10 @@
         @extend %image;
         object-fit: contain;
     }
+}
 
-    &--full img {
+%image-block--full {
+    img {
         min-width: 100%;
         min-height: 100%;
         object-fit: cover;

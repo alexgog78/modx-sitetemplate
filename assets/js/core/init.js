@@ -1,11 +1,11 @@
 define([
     'jquery',
     'underscore',
+    'domReady!',
 ], function ($, _) {
     'use strict';
 
-    $.init = $.init || {};
-    $.init = {
+    $.init = $.init || {
         scriptSelector: 'script[type="text/x-init"]',
         dataAttr: 'data-init',
         elements: [],
@@ -101,21 +101,16 @@ define([
             if (!element) {
                 element = document;
             }
-            //TODO WTF
             require([requirejs.s.contexts._.config.widgetsUrl + '/' + widget], function (fn) {
                 if (typeof fn === 'object') {
                     fn = fn[widget].bind(fn);
-                    //console.log(1);
                 }
                 if (_.isFunction(fn)) {
-                    //console.log(2);
                     fn(config, element);
                 } else if ($(element)[widget]) {
-                    //console.log(3);
                     $(element)[widget](config);
                 }
             });
         }
     };
-    //$.init.init();
 });

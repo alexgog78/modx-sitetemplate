@@ -1,5 +1,32 @@
 %input-radio {
+    @extend %display--inline-flex;
+    @extend %cursor--pointer;
+    align-items: center;
 
+    &.disabled {
+        @extend %cursor--not-allowed;
+        opacity: .5;
+    }
+
+    i {
+        @include transition--color;
+        flex-shrink: 0;
+        margin-right: .5rem;
+    }
+
+    input {
+        @extend %display--none;
+    }
+
+    &:hover i,
+    &.active i,
+    input:checked ~ i {
+
+    }
+
+    &:hover i {
+        opacity: .8;
+    }
 }
 
 .input-radio {

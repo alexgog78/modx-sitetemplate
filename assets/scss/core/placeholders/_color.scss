@@ -1,0 +1,20 @@
+@each $key, $value in $colors {
+    %color--#{$key} {
+        color: $value;
+    }
+}
+@each $breakpoints, $width in $breakpoints {
+    @each $key, $value in $colors {
+        %color__#{$breakpoints}-max--#{$key} {
+            @include media-breakpoint($breakpoints, max) {
+                color: $value;
+            }
+        }
+
+        %color__#{$breakpoints}-min--#{$key} {
+            @include media-breakpoint($breakpoints, min) {
+                color: $value;
+            }
+        }
+    }
+}

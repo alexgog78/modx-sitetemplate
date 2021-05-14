@@ -1,0 +1,39 @@
+%input-file {
+    @extend %position--relative;
+    @extend %display--inline-flex;
+    @extend %cursor--pointer;
+    width: 100%;
+    height: 3rem;
+
+    input[type="text"] {
+        @extend %input-text;
+        flex-grow: 1;
+        height: 100%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    button {
+        @extend %button;
+        height: 100%;
+    }
+
+    input[type="file"] {
+        @extend %position--absolute;
+        @extend %cursor--pointer;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    &:hover button {
+        opacity: .8;
+    }
+}
+
+.input-file {
+    @extend %input-file;
+}

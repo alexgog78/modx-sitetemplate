@@ -6,6 +6,7 @@ $text-align: left, right, center, justify !default;
 $text-decoration: line-through, overline, underline, none !default;
 $text-transform: capitalize, uppercase, lowercase, none !default;
 $font-style: normal, italic, oblique !default;
+$cursor: default, pointer, none, not-allowed, alias, all-scroll, cell, context-menu, col-resize, copy, crosshair, e-resize, ew-resize, grab, grabbing, help, move, n-resize, ne-resize, nesw-resize, ns-resize, nw-resize, nwse-resize, no-drop, progress, row-resize, s-resize, se-resize, sw-resize, text, vertical-text, w-resize, wait, zoom-in, zoom-out !default;
 
 $breakpoints: (
     xs: 0,
@@ -59,13 +60,8 @@ $default__font-family: 'OpenSans' !default;
 $default__font-weight: 'regular' !default;
 $default__color: 'black' !default;
 $default__letter-spacing: 0em !default;
-$default__font-sizes: (
-    xs: 16px,
-    sm: 16px,
-    md: 16px,
-    lg: 16px,
-    xl: 16px,
-) !default;
+$default__font-size: 16px !default;
+$default__font-size--min: 14px !default;
 
 $heading__font-sizes: (
     1: 36,
@@ -75,6 +71,7 @@ $heading__font-sizes: (
     5: 20,
     6: 16,
 ) !default;
+$heading__font-sizes--media: () !default;
 
 $body__background: 'white' !default;
 
@@ -84,3 +81,6 @@ $container__padding: 15px !default;
 
 $link__color: 'success' !default;
 $link__color--active: 'error' !default;
+
+$grid-columns: 12 !default;
+$grid-gap: 30px !default;

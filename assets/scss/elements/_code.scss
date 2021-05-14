@@ -1,7 +1,7 @@
 %code {
     @extend %display--block;
-    margin: px-to-rem(10) 0;
-    padding: px-to-rem(10);
+    margin: .5rem 0;
+    padding: .5rem;
     overflow: auto;
     background-color: #f5f5f5;
     border: 1px solid #cccccc;

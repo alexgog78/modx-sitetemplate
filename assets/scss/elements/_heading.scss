@@ -3,11 +3,11 @@
     @extend %position--relative;
     @extend %font-weight--bold;
     line-height: 1.2em;
+}
 
-    @each $heading, $font-size in $heading__font-sizes {
-        &--#{$heading} {
-            @extend %font-size--#{$font-size};
-        }
+@each $heading, $font-size in $heading__font-sizes {
+    %heading--#{$heading} {
+        @extend %font-size--#{$font-size};
     }
 }
 

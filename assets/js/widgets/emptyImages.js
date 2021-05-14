@@ -9,10 +9,9 @@ define([
             stub: './assets/images/no-photo.png'
         },
 
-        _create: function () {
+        _run: function () {
             var widget = this;
-            widget._super();
-            widget.element.find('img').each(function () {
+            this.element.find('img').each(function () {
                 if (this.complete && this.naturalWidth != 0) {
                     return;
                 }

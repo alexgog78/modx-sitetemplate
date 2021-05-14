@@ -1,0 +1,20 @@
+@each $key, $value in $font-families {
+    %font-family--#{$key} {
+        font-family: $value;
+    }
+}
+@each $breakpoints, $width in $breakpoints {
+    @each $key, $value in $font-families {
+        %font-family__#{$breakpoints}-max--#{$key} {
+            @include media-breakpoint($breakpoints, max) {
+                font-family: $value;
+            }
+        }
+
+        %font-family__#{$breakpoints}-min--#{$key} {
+            @include media-breakpoint($breakpoints, min) {
+                font-family: $value;
+            }
+        }
+    }
+}

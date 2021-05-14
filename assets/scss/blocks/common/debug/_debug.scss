@@ -1,0 +1,18 @@
+.debug {
+    @extend %position--fixed;
+    @extend %cursor--help;
+    @include transition--all;
+    z-index: 980;
+    bottom: 0; left: 0;
+    padding: 1em;
+    opacity: .5;
+    font-size: .75rem;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    td {
+        padding: .2em .5em;
+    }
+}

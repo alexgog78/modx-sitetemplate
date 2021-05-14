@@ -1,4 +1,4 @@
-{set $assetsVersion = $_modx->getPlaceholder('+dev_mode') ? ('' | date : 'U') : $_modx->getPlaceholder('+assets_version')}
+{set $_modx->config.assets_version = $_modx->getPlaceholder('+dev_mode') ? ('' | date : 'U') : $_modx->getPlaceholder('+assets_version')}
 <!DOCTYPE html>
 <html lang="{$_modx->config.cultureKey}">
 <head>
@@ -10,67 +10,56 @@
     <meta name="keywords" content="{$_modx->resource.metaKeywords}">
     <meta name="description" content="{$_modx->resource.metaDescription}">
 
-    <link href="./assets/images/favicon.ico?v={$assetsVersion}" rel="shortcut icon">
-    <link href="./assets/images/favicon.png?v={$assetsVersion}" rel="icon" type="image/png">
+    <link rel="preload" href="{$_modx->config.assets_url}css/styles.css?v={$_modx->config.assets_version}" as="style">
+    <link rel="preload" href="{$_modx->config.assets_url}js/core/require.js?v={$_modx->config.assets_version}" as="script">
 
-    <link href="./assets/css/fonts.css?v={$assetsVersion}" rel="stylesheet">
-    <link href="./assets/css/styles.css?v={$assetsVersion}" rel="stylesheet">
+    <link href="{$_modx->config.assets_url}images/favicon.png?v={$_modx->config.assets_version}" rel="icon" type="image/png">
+    <link href="{$_modx->config.assets_url}css/styles.css?v={$_modx->config.assets_version}" rel="stylesheet">
 
-    <script src="./assets/js/requirejs-config.js?v={$assetsVersion}"></script>
-    <script src="./assets/js/core/require.js?v={$assetsVersion}"></script>
+    <script src="{$_modx->config.assets_url}js/requirejs-config.js?v={$_modx->config.assets_version}"></script>
+    <script src="{$_modx->config.assets_url}js/core/require.js?v={$_modx->config.assets_version}"></script>
     <script>
+        'use strict';
         window.debug = {$_modx->getPlaceholder('+dev_mode') ? 'true' : 'false'};
-        requirejs.config({
-            urlArgs: 'v={$assetsVersion}'
+        require.config({
+            urlArgs: 'v={$_modx->config.assets_version}',
+            baseUrl: '{$_modx->config.assets_url}js',
+            cssUrl: '{$_modx->config.assets_url}css',
         });
-        require(['main']);
+        require([
+            'jquery',
+            'init',
+        ], function ($) {
+            $.init.initialize();
+        });
     </script>
     <script type="text/x-init">
         {[
             '*' => [
-                'anchorLinks' => [],
+                'notification' => [],
+                'modalWindow' => [],
+            ],
+            'a[href^="#"]' => [
+                'anchorLink' => [],
+            ],
+            '[type="tel"]' => [
+                'inputTel' => [],
             ],
         ] | toJSON}
     </script>
 </head>
 <body class="page page--resource-{$_modx->resource.id}">
-    <header class="page__header header">
-        {$_modx->resource.pagetitle}
-    </header>
+    {include 'file:chunks/header.tpl'}
+    {include 'file:chunks/breadcrumbs.tpl'}
 
     <main class="page__main">
         {block 'content'}{/block}
     </main>
 
-    <footer class="page__footer header">
-        {'' | date : 'Y'} {$_modx->config.site_name}
-    </footer>
+    {include 'file:chunks/footer.tpl'}
 
     {if $_modx->getPlaceholder('+dev_mode')}
-        <div class="debug">
-            <table>
-                <tr>
-                    <td>Количество запросов к БД:</td>
-                    <td>{$_modx->getInfo('queries')}</td>
-                </tr>
-                <tr>
-                    <td>Время запросов к БД:</td>
-                    <td>{$_modx->getInfo('queryTime')}</td>
-                </tr>
-                <tr>
-                    <td>Время работы PHP скриптов:</td>
-                    <td>{$_modx->getInfo('phpTime')}</td>
-                </tr>
-                <tr>
-                    <td>Общее время генерации страницы:</td>
-                    <td>{$_modx->getInfo('totalTime')}</td>
-                </tr>
-                <tr>
-                    <td>Источник содержимого:</td>
-                    <td>{$_modx->getInfo('source')}</td>
-                </tr>
-            </table>
-        </div>
+        {include 'file:chunks/debug.tpl'}
     {/if}
 </body>
 </html>

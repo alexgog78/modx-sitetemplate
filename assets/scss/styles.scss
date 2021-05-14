@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 //CORE
 @import "core/reset";
 @import "config/variables";
@@ -21,6 +20,7 @@
 @import "elements/input-text";
 @import "elements/input-textarea";
 @import "elements/input-select";
+@import "elements/input-file";
 @import "elements/input-checkbox";
 @import "elements/input-radio";
 @import "elements/list";
@@ -28,7 +28,8 @@
 @import "elements/loader";
 
 
-//THEME BLOCKS
-
-
-//CONTENT BLOCKS
+//BLOCKS
+@import "blocks/common";
+@import "blocks/desktop";
+@import "blocks/tablet";
+@import "blocks/mobile";

@@ -1,5 +1,5 @@
-$grid-columns: 12 !default;
-$grid-gap: 30px !default;
+@import 'placeholders/display';
+@import 'placeholders/position';
 
 .row {
     @extend %display--flex;

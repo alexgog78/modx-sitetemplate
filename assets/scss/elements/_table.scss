@@ -1,20 +1,19 @@
 %table {
-    margin-bottom: .75em;
     line-height: 1.5em;
 
     thead,
     tfoot {
-        @extend %background--grey;
+        @extend %background-color--grey;
         @extend %font-weight--bold;
     }
 
     tbody {
         tr:nth-child(odd) {
-            @extend %background--white;
+            @extend %background-color--white;
         }
 
         tr:nth-child(even) {
-            @extend %background--grey;
+            @extend %background-color--grey;
         }
     }
 
