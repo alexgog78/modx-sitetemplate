@@ -1,5 +1,6 @@
-@import 'config/variables';
 @import 'mixins/font-face';
+
+$fonts-folder: '../fonts/' !default;
 
 @each $key, $font in $font-families {
     $baseFolder: map-get($font, baseFolder);
@@ -11,7 +12,7 @@
         $weight: map-get($fontWeightData, weight);
 
         @each $style in map-get($fontWeightData, styles) {
-            $path: $fonts-folder + $baseFolder + '/' + $weight + ' ' + $weightKey + '/' + $baseFile + '--' + $style;
+            $path: $fonts-folder + $baseFolder + '/' + $weight + '_' + $weightKey + '/' + $baseFile + '--' + $style;
             @include font-face($fontFace, $path, $style, $weight, $fontId);
         }
     }

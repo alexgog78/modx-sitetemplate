@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="{$_modx->config.site_url}">
-    <title>{$_modx->resource.metaTitle}</title>
-    <meta name="keywords" content="{$_modx->resource.metaKeywords}">
-    <meta name="description" content="{$_modx->resource.metaDescription}">
+    <title>{$_modx->resource.meta_title}</title>
+    <meta name="keywords" content="{$_modx->resource.meta_keywords}">
+    <meta name="description" content="{$_modx->resource.meta_description}">
 
     <link rel="preload" href="{$_modx->config.assets_url}css/styles.css?v={$_modx->config.assets_version}" as="style">
     <link rel="preload" href="{$_modx->config.assets_url}js/core/require.js?v={$_modx->config.assets_version}" as="script">

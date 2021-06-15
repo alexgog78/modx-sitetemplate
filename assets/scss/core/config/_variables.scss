@@ -16,8 +16,6 @@ $breakpoints: (
     xl: 1200px,
 ) !default;
 
-$fonts-folder: '../fonts/' !default;
-
 $font-families: (
     OpenSans: 'Open Sans',
     PTSans: 'PT Sans',
@@ -71,7 +69,6 @@ $heading__font-sizes: (
     5: 20,
     6: 16,
 ) !default;
-$heading__font-sizes--media: () !default;
 
 $body__background: 'white' !default;
 

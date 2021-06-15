@@ -1,0 +1,10 @@
+<?php
+
+if (!class_exists('msOrderInterface')) {
+    require_once MODX_CORE_PATH . 'components/minishop2/model/minishop2/msorderhandler.class.php';
+}
+
+class appMs2OrderHandler extends msOrderHandler implements msOrderInterface
+{
+
+}

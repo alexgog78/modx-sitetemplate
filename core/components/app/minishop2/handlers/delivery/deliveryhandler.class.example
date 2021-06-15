@@ -1,0 +1,10 @@
+<?php
+
+if (!class_exists('msDeliveryInterface')) {
+    require_once MODX_CORE_PATH . 'components/minishop2/model/minishop2/msdeliveryhandler.class.php';
+}
+
+class appMs2DeliveryHandler extends msDeliveryHandler implements msDeliveryInterface
+{
+
+}

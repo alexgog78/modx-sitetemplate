@@ -1,29 +1,27 @@
 @import 'config/variables';
 
-@import 'mixins/media-breakpoint';
-@import 'mixins/columns';
-@import 'mixins/transition';
 @import 'mixins/aspect-ratio';
 @import 'mixins/centered-element';
+@import 'mixins/columns';
 @import 'mixins/cross-styles';
 @import 'mixins/font-face';
+@import 'mixins/media-breakpoint';
+@import 'mixins/transition';
 
-@import 'placeholders/display';
-@import 'placeholders/position';
-@import 'placeholders/float';
-
-@import 'placeholders/visibility';
 @import "placeholders/background-color";
 @import "placeholders/border";
-@import "placeholders/stroke";
 @import "placeholders/fill";
+@import "placeholders/stroke";
 @import 'placeholders/color';
 @import 'placeholders/cursor';
-
+@import 'placeholders/display';
+@import 'placeholders/float';
 @import 'placeholders/font-family';
 @import 'placeholders/font-size';
-@import 'placeholders/font-weight';
 @import 'placeholders/font-style';
+@import 'placeholders/font-weight';
+@import 'placeholders/position';
 @import 'placeholders/text-align';
 @import 'placeholders/text-decoration';
 @import 'placeholders/text-transform';
+@import 'placeholders/visibility';

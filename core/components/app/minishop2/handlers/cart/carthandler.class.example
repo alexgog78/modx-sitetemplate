@@ -1,0 +1,10 @@
+<?php
+
+if (!class_exists('msCartInterface')) {
+    require_once MODX_CORE_PATH . 'components/minishop2/model/minishop2/mscarthandler.class.php';
+}
+
+class appMs2CartHandler extends msCartHandler implements msCartInterface
+{
+
+}

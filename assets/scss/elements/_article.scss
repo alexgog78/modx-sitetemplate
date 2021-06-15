@@ -1,0 +1,62 @@
+%article {
+    * {
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    p {
+        @extend %paragraph;
+    }
+
+    @each $heading, $font-size in $heading__font-sizes {
+        h#{$heading} {
+            @extend %heading--#{$heading};
+        }
+    }
+
+    hr {
+        @extend %line;
+    }
+
+    a {
+        @extend %link;
+    }
+
+    img {
+        @extend %image;
+    }
+
+    table {
+        @extend %table;
+    }
+
+    ul {
+        @extend %list--ul;
+    }
+
+    ol {
+        @extend %list--ol;
+    }
+
+    table {
+        @extend %table;
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+        @extend %code;
+    }
+
+    video {
+        width: 100%;
+    }
+}
+
+.article {
+    @extend %article;
+}

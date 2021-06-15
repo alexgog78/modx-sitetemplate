@@ -8,24 +8,26 @@
 
 
 //ELEMENTS
+@import "elements/article";
+@import "elements/button";
+@import "elements/code";
+@import "elements/container";
+@import "elements/heading";
+@import "elements/icon-ui";
 @import "elements/image";
 @import "elements/image-block";
-@import "elements/link";
-@import "elements/paragraph";
-@import "elements/heading";
-@import "elements/code";
-@import "elements/line";
-@import "elements/container";
-@import "elements/button";
+@import "elements/input-checkbox";
+@import "elements/input-file";
+@import "elements/input-radio";
+@import "elements/input-select";
 @import "elements/input-text";
 @import "elements/input-textarea";
-@import "elements/input-select";
-@import "elements/input-file";
-@import "elements/input-checkbox";
-@import "elements/input-radio";
+@import "elements/line";
+@import "elements/link";
 @import "elements/list";
-@import "elements/table";
 @import "elements/loader";
+@import "elements/paragraph";
+@import "elements/table";
 
 
 //BLOCKS
