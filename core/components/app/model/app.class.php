@@ -6,6 +6,7 @@ class App extends abstractModule
 {
     const PKG_VERSION = '1.0.0';
     const PKG_RELEASE = 'pl';
+    const PKG_NAME = 'App';
     const PKG_NAMESPACE = 'app';
     const TABLE_PREFIX = 'app_';
 
@@ -15,14 +16,12 @@ class App extends abstractModule
     /**
      * @return array
      */
-    public function getWebConfig()
+    protected function getWebDefaultAssetsConfig()
     {
-        return [
-            'cssUrl' => $this->cssUrl,
-            'jsUrl' => $this->jsUrl,
+        $config = parent::getWebDefaultAssetsConfig();
+        return array_merge($config, [
             'actionsUrl' => $this->assetsUrl . 'actions/',
-            'actionKey' => $this->actionKey,
             'resourceId' => $this->modx->resource->get('id'),
-        ];
+        ]);
     }
 }

@@ -13,6 +13,7 @@
 
     @each $heading, $font-size in $heading__font-sizes {
         h#{$heading} {
+            @extend %heading;
             @extend %heading--#{$heading};
         }
     }
@@ -34,10 +35,12 @@
     }
 
     ul {
+        @extend %list;
         @extend %list--ul;
     }
 
     ol {
+        @extend %list;
         @extend %list--ol;
     }
 
@@ -59,4 +62,5 @@
 
 .article {
     @extend %article;
+    padding-bottom: 3.125rem;
 }

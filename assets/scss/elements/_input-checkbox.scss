@@ -10,8 +10,22 @@
 
     i {
         @include transition--color;
+        @extend %display--inline-flex;
+        @extend %border--black;
         flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 1.25rem;
+        height: 1.25rem;
         margin-right: .5rem;
+
+        &::after {
+            @extend %background-color--black;
+            content: "";
+            width: .75rem;
+            height: .75rem;
+            opacity: 0;
+        }
     }
 
     input {

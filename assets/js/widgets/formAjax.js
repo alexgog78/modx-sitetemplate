@@ -41,7 +41,7 @@ define([
 
         _successSubmit: function (response, statusText, xhr, $form) {
             this.element.removeClass(this.options.submitClass);
-            if (!response.status) {
+            if (!response.success) {
                 return this._callbacks.error.call(this, response);
             }
             return this._callbacks.success.call(this, response);

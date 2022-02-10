@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="app" baseClass="abstractObject" platform="mysql" defaultEngine="InnoDB" tablePrefix="app_" phpdoc-package="app" phpdoc-subpackage="" version="1.1">
+    <object class="appItem" table="items" extends="abstractSimpleObject">
+        <field key="name" dbtype="varchar" precision="255" phptype="string" null="true"/>
+        <field key="description" dbtype="text" phptype="string" null="true"/>
+        <field key="sort_order" dbtype="int" precision="10" attributes="unsigned" phptype="integer" default="0"/>
+        <!--Indexes-->
+        <index alias="sort_order" name="sort_order" primary="false" unique="false" type="BTREE">
+            <column key="sort_order" length="" collation="A" null="false"/>
+        </index>
+        <!--Validation-->
+        <validation>
+            <rule field="name" name="preventBlank" type="xPDOValidationRule" rule="xPDOMinLengthValidationRule" value="1" message="field_required"/>
+        </validation>
+    </object>
+</model>

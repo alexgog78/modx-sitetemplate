@@ -1,31 +1,12 @@
 %input-radio {
-    @extend %display--inline-flex;
-    @extend %cursor--pointer;
-    align-items: center;
-
-    &.disabled {
-        @extend %cursor--not-allowed;
-        opacity: .5;
-    }
+    @extend %input-checkbox;
 
     i {
-        @include transition--color;
-        flex-shrink: 0;
-        margin-right: .5rem;
-    }
+        border-radius: 50%;
 
-    input {
-        @extend %display--none;
-    }
-
-    &:hover i,
-    &.active i,
-    input:checked ~ i {
-
-    }
-
-    &:hover i {
-        opacity: .8;
+        &::after {
+            border-radius: 50%;
+        }
     }
 }
 

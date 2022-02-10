@@ -1,6 +1,6 @@
 {set $_modx->config.assets_version = $_modx->getPlaceholder('+dev_mode') ? ('' | date : 'U') : $_modx->getPlaceholder('+assets_version')}
 <!DOCTYPE html>
-<html lang="{$_modx->config.cultureKey}">
+<html class="page page--resource-{$_modx->resource.id}" lang="{$_modx->config.cultureKey}">
 <head>
     <meta charset="{$_modx->config.modx_charset}">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
@@ -48,7 +48,7 @@
         ] | toJSON}
     </script>
 </head>
-<body class="page page--resource-{$_modx->resource.id}">
+<body class="page__body">
     {include 'file:chunks/header.tpl'}
     {include 'file:chunks/breadcrumbs.tpl'}
 
@@ -58,8 +58,6 @@
 
     {include 'file:chunks/footer.tpl'}
 
-    {if $_modx->getPlaceholder('+dev_mode')}
-        {include 'file:chunks/debug.tpl'}
-    {/if}
+    {include 'file:chunks/debug.tpl'}
 </body>
 </html>

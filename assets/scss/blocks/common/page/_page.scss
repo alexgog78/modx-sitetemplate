@@ -1,4 +1,4 @@
-html {
+.page {
     @extend %font-weight--#{$default__font-weight};
     @extend %color--#{$default__color};
     font-family: map-get($font-families, $default__font-family), sans-serif;
@@ -20,4 +20,7 @@ html {
             opacity: 0;
         }
     }
+
+    @import "page__body";
+    @import "page__main";
 }

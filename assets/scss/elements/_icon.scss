@@ -1,0 +1,8 @@
+%icon {
+    @extend %display--inline-block;
+    @include transition--color;
+}
+
+.icon {
+    @extend %icon;
+}

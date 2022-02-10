@@ -1,7 +1,5 @@
 'use strict';
 
-Ext.namespace('App.combo');
-
 App.combo.select = function (config) {
     config = config || {};
     Ext.applyIf(config, {
@@ -16,4 +14,25 @@ App.combo.select = function (config) {
     App.combo.select.superclass.constructor.call(this, config);
 };
 Ext.extend(App.combo.select, ms2Extend.combo.select.local.abstract);
+Ext.reg('app-combo-select', App.combo.select);
+
+
+App.combo.select = function (config) {
+    config = config || {};
+    Ext.applyIf(config, {
+        url: App.config.connectorUrl,
+        baseParams: {
+            action: 'mgr/getlist',
+            combo: 1
+        },
+        fields: [
+            'id',
+            'name',
+        ],
+        displayField: 'name',
+        valueField: 'id',
+    });
+    App.combo.select.superclass.constructor.call(this, config);
+};
+Ext.extend(App.combo.select, App.combo.select.remote.abstract);
 Ext.reg('app-combo-select', App.combo.select);

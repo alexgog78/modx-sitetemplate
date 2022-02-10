@@ -18,6 +18,6 @@ define([
 
         _destroy: function () {
             this.element.exampleLib.destroy();
-        }
+        },
     });
 });

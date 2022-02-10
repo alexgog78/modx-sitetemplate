@@ -1,5 +1,5 @@
 $display: none, block, inline-block, flex, inline-flex, grid, inline-grid, table, inline-table, table-row, table-cell, list-item !default;
-$position: absolute, fixed, relative, static !default;
+$position: absolute, fixed, relative, static, sticky !default;
 $float: left, right, none !default;
 $visibility: hidden, visible, collapse !default;
 $text-align: left, right, center, justify !default;
@@ -45,10 +45,11 @@ $font-sizes: (
 ) !default;
 
 $colors: (
+    'none': none,
+    'transparent': transparent,
     'black': #000000,
     'white': #ffffff,
     'grey': #aaaaaa,
-    'transparent': transparent,
     'success': #00ff00,
     'error': #ff0000,
 ) !default;

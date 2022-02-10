@@ -10,8 +10,7 @@ define([
         },
 
         _run: function () {
-            this.element.attr('placeholder', '+7 (___) ___ __ __')
             this._super();
-        }
+        },
     });
 });

@@ -15,18 +15,21 @@ return [
             'precision' => '1',
             'attributes' => 'unsigned',
             'phptype' => 'boolean',
+            'null' => false,
             'default' => 0,
         ],
         'app_field_int' => [
             'dbtype' => 'int',
             'precision' => '10',
             'phptype' => 'integer',
+            'null' => false,
             'default' => 0,
         ],
         'app_field_decimal' => [
             'dbtype' => 'decimal',
             'precision' => '12,2',
             'phptype' => 'float',
+            'null' => false,
             'default' => 0,
         ],
         'app_field_varchar' => [
@@ -34,16 +37,19 @@ return [
             'precision' => '255',
             'phptype' => 'string',
             'null' => true,
+            'default' => NULL,
         ],
         'app_field_text' => [
             'dbtype' => 'text',
             'phptype' => 'string',
             'null' => true,
+            'default' => NULL,
         ],
         'app_field_json' => [
             'dbtype' => 'text',
             'phptype' => 'json',
             'null' => true,
+            'default' => NULL,
         ],
     ],
     'indexes' => [
