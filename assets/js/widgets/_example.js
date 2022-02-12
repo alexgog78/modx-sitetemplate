@@ -1,7 +1,7 @@
 define([
-    'libs/ExampleLib',
+    'libs/exampleLib',
     'abstractWidget',
-], function () {
+], function (exampleLib) {
     'use strict';
 
     $.widget('widgets.example', $.widgets.abstract, {

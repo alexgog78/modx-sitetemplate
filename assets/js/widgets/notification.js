@@ -11,31 +11,35 @@ define([
         options: {
             progressBar: true,
         },
-        handler: null,
 
         _run: function () {
-            this.handler = toastr;
-            this.handler.options = this.options;
+            this.element['widgets.notification'] = toastr;
+            this.element['widgets.notification'].options = this.options;
+        },
+
+        _destroy: function () {
+            this.element['widgets.notification'].remove();
+            this.element['widgets.notification'] = null;
         },
 
         info: function (text = '', title = '', options = {}) {
-            return this.handler.info(text, title, options);
+            return this.element['widgets.notification'].info(text, title, options);
         },
 
         warning: function (text = '', title = '', options = {}) {
-            return this.handler.warning(text, title, options);
+            return this.element['widgets.notification'].warning(text, title, options);
         },
 
         success: function (text = '', title = '', options = {}) {
-            return this.handler.success(text, title, options);
+            return this.element['widgets.notification'].success(text, title, options);
         },
 
         error: function (text = '', title = '', options = {}) {
-            return this.handler.error(text, title, options);
+            return this.element['widgets.notification'].error(text, title, options);
         },
 
         close: function (instance) {
-            this.handler.clear(instance, {force: true});
+            this.element['widgets.notification'].clear(instance, {force: true});
         },
     });
 });

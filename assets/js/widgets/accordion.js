@@ -11,41 +11,41 @@ define([
             openClass: 'open',
             hiddenClass: 'hidden',
             open: [],
-            onlyOne: true,
+            onlyOne: false,
         },
 
         _run: function () {
-            let $openedByDefault = this.element.find(this.options.section).filter(this.openedByDefault.bind(this));
+            let $openedByDefault = this.element.find(this.options.section).filter(this._openedByDefault.bind(this));
             if ($openedByDefault.length > 0) {
-                this.openSection($openedByDefault);
+                this._openSection($openedByDefault);
             }
-            this.element.on('click.accordion', this.options.header, this.toggleSection.bind(this));
+            this.element.on('click.accordion', this.options.header, this._toggleSection.bind(this));
         },
 
         _destroy: function () {
             this.element.unbind('click.accordion');
             let $sections = this.element.find(this.options.section);
             if ($sections.length > 0) {
-                this.openSection($sections);
+                this._openSection($sections);
             }
         },
 
-        openedByDefault: function (i) {
+        _openedByDefault: function (i) {
             return $.inArray(i, this.options.open) !== -1;
         },
 
-        toggleSection: function (e) {
+        _toggleSection: function (e) {
             e.preventDefault();
             let $currentSection = $(e.target).parents(this.options.section);
             let state = $currentSection.data('accordion-state');
             if (state === 1) {
-                this.closeSection($currentSection);
+                this._closeSection($currentSection);
             } else {
-                this.openSection($currentSection);
+                this._openSection($currentSection);
             }
         },
 
-        openSection: function ($section) {
+        _openSection: function ($section) {
             $section
                 .removeClass(this.options.hiddenClass)
                 .addClass(this.options.openClass)
@@ -60,12 +60,12 @@ define([
             if (this.options.onlyOne) {
                 let $sections = this.element.find(this.options.section).not($section);
                 if ($sections.length > 0) {
-                    this.closeSection($sections);
+                    this._closeSection($sections);
                 }
             }
         },
 
-        closeSection: function ($section) {
+        _closeSection: function ($section) {
             $section
                 .find(this.options.content)
                 .stop(true, true)

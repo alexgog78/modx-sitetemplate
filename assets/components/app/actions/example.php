@@ -6,12 +6,7 @@
  */
 require_once dirname(__DIR__) . '/action.php';
 
-$pageId = $_GET['page'];
-$modx->resource = $modx->getObject('modDocument', [
-    'id' => $pageId,
-]);
-
-$response = $pdoTools->getChunk($_GET['tpl'], [
-    'modal' => true,
-]);
-exit($response);
+exit($modx->toJSON([
+    'success' => 0,
+    'message' => 'Aliquid aut aut recusandae Ut rerum ut voluptatem dolores provident nemo nostrum sit',
+]));

@@ -11,11 +11,19 @@ define([
         },
 
         _run: function () {
-            this._messages();
-            this.element.validate(this.options);
+            this._loadMessages();
+            this.element['widgets.formValidate'] = this.element.validate(this.options);
         },
 
-        _messages: function () {
+        _destroy: function () {
+            this.element['widgets.formValidate'].destroy();
+        },
+
+        validate: function () {
+            return this.element.valid();
+        },
+
+        _loadMessages: function () {
             $.extend($.validator.messages, {
                 required: "Это поле необходимо заполнить.",
                 remote: "Пожалуйста, введите правильное значение.",
@@ -35,6 +43,6 @@ define([
                 max: $.validator.format("Пожалуйста, введите число, меньшее или равное {0}."),
                 min: $.validator.format("Пожалуйста, введите число, большее или равное {0}.")
             });
-        }
+        },
     });
 });

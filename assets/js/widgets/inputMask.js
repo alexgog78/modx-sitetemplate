@@ -12,6 +12,10 @@ define([
 
         _run: function () {
             this.element.mask(this.options.mask, this.options);
-        }
+        },
+
+        _destroy: function () {
+            this.element.unmask();
+        },
     });
 });

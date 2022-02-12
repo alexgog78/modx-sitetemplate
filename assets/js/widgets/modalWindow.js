@@ -24,15 +24,23 @@ define([
                 }
             }
         },
-        handler: null,
 
         _run: function () {
-            this.handler = $.fancybox;
+            this.element['widgets.modalWindow'] = $.fancybox;
+        },
+
+        _destroy: function () {
+            this.element['widgets.modalWindow'].close();
+            this.element['widgets.modalWindow'] = null;
         },
 
         show: function (src, options = {}, index = 0) {
             options = $.extend({}, this.options, options);
-            this.handler.open(src, options, index);
+            this.element['widgets.modalWindow'].open(src, options, index);
+        },
+
+        close: function () {
+            this.element['widgets.modalWindow'].close();
         },
     });
 });

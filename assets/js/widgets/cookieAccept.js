@@ -20,17 +20,28 @@ define([
         instance: null,
 
         _run: function () {
-            let widget = this;
-            $(document).on('click', '.cookie-popup [type="submit"]', function (e) {
-                e.preventDefault();
-                localStorage.setItem(widget.options.storageKey, true);
-                $(document).notification('close', widget.instance);
-            });
-
-            let isCookieAccepted = localStorage.getItem(this.options.storageKey);
-            if (!isCookieAccepted) {
+            $(document).on('click.cookieAccept', '.cookie-popup [type="submit"]', this._submit.bind(this));
+            if (!this._getState()) {
                 this.instance = $(document).notification('info', this.options.text, this.options.title, this.options);
             }
+        },
+
+        _destroy: function () {
+            $(document).notification('close', this.instance);
+        },
+
+        _submit: function (e) {
+            e.preventDefault();
+            this._setState();
+            $(document).notification('close', this.instance);
+        },
+
+        _getState: function () {
+            return localStorage.getItem(this.options.storageKey);
+        },
+
+        _setState: function () {
+            localStorage.setItem(this.options.storageKey, true);
         },
     });
 });
