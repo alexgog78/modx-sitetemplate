@@ -1,6 +1,5 @@
 define([
     'widgets/inputMask',
-    'abstractWidget',
 ], function () {
     'use strict';
 

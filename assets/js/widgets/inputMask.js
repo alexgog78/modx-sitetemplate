@@ -1,6 +1,5 @@
 define([
     'libs/jQuery.maskedInput',
-    'abstractWidget',
 ], function () {
     'use strict';
 

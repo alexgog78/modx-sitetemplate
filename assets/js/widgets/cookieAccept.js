@@ -1,6 +1,5 @@
 define([
     'widgets/notification',
-    'abstractWidget',
 ], function () {
     'use strict';
 

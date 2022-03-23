@@ -2,6 +2,7 @@
 
 /**
  * @var modX $modx
+ * @var App $app
  * @var pdoTools $pdoTools
  */
 require_once dirname(__DIR__) . '/action.php';

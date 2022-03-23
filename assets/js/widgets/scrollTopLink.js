@@ -1,5 +1,5 @@
 define([
-    'abstractWidget',
+
 ], function () {
     'use strict';
 

@@ -4,7 +4,7 @@ if (!class_exists('msPaymentInterface')) {
     require_once MODX_CORE_PATH . 'components/minishop2/model/minishop2/mspaymenthandler.class.php';
 }
 
-class appMs2PaymentHandler extends msPaymentHandler implements msPaymentInterface
+class appPaymentHandler extends msPaymentHandler implements msPaymentInterface
 {
 
 }

@@ -1,16 +1,15 @@
-@mixin transition($property: all,  $time: $default__transition-time, $easing: ease-out) {
-    transition: $property $time $easing;
+@mixin transition($properties,  $time: $default__transition-time, $easing: ease-in-out) {
+    $transition: ();
+    @each $key in $properties {
+        $transition: append($transition, $key $time $easing, comma);
+    }
+    transition: $transition;
 }
 
 @mixin transition--all($time: $default__transition-time) {
-    transition: all $time ease-out;
+    @include transition((all));
 }
 
 @mixin transition--color($time: $default__transition-time) {
-    transition:
-        color $time ease-in-out,
-        background-color $time ease-in-out,
-        border-color $time ease-in-out,
-        opacity $time ease-in-out,
-        box-shadow $time ease-in-out;
+    @include transition((color, background-color, border-color, opacity, box-shadow, stroke, fill));
 }

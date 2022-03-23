@@ -1,4 +1,5 @@
 @mixin media-breakpoint($key, $type: max, $breakpoints: $breakpoints) {
+    //TODO $breakpoints => custom
     $width: map-get($breakpoints, $key);
     $width: if($width != 0, $width, null);
 

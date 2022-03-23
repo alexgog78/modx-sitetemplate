@@ -1,6 +1,5 @@
 define([
     'libs/exampleLib',
-    'abstractWidget',
 ], function (exampleLib) {
     'use strict';
 

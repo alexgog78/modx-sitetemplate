@@ -1,6 +1,5 @@
 define([
     'mediaCheck',
-    'abstractWidget',
 ], function () {
     'use strict';
 

@@ -1,6 +1,5 @@
 define([
     'libs/jQuery.fancyBox',
-    'abstractWidget',
 ], function () {
     'use strict';
 

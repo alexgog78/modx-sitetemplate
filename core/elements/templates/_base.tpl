@@ -28,24 +28,27 @@
         });
         require([
             'jquery',
+            'jquery/ui',
+            'abstractWidget',
             'init',
         ], function ($) {
             $.init.initialize();
         });
     </script>
     <script type="text/x-init">
-        {[
-            '*' => [
-                'notification' => [],
-                'modalWindow' => [],
-            ],
-            'a[href^="#"]' => [
-                'anchorLink' => [],
-            ],
-            '[type="tel"]' => [
-                'inputTel' => [],
-            ],
-        ] | toJSON}
+        {
+            "*": {
+                "notification": [],
+                "modalWindow": [],
+                "cookieAccept": []
+            },
+            "a[href^=\"#\"]": {
+                "anchorLink": []
+            },
+            "[type=\"tel\"]": {
+                "inputTel": []
+            }
+        }
     </script>
 </head>
 <body class="page__body">

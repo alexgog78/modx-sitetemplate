@@ -1,6 +1,5 @@
 define([
     'libs/jQuery.validate',
-    'abstractWidget',
 ], function ($) {
     'use strict';
 

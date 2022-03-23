@@ -1,6 +1,5 @@
 define([
     'widgets/modalWindow',
-    'abstractWidget',
 ], function () {
     'use strict';
 

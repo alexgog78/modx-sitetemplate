@@ -1,8 +1,10 @@
 define([
-    'jquery',
     'underscore',
+    'jquery',
+    'jquery/ui',
+    'abstractWidget',
     'domReady!',
-], function ($, _) {
+], function (_, $) {
     'use strict';
 
     $.init = $.init || {

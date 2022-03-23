@@ -1,6 +1,5 @@
 define([
     'libs/jQuery.toastr',
-    'abstractWidget',
 ], function (toastr) {
     'use strict';
 

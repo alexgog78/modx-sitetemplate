@@ -1,6 +1,5 @@
 define([
     'libs/jQuery.form',
-    'abstractWidget',
 ], function () {
     'use strict';
 
@@ -30,7 +29,7 @@ define([
         _beforeSubmit: function (arr, $form, options) {
             $(':button, [type="submit"]', this.element).attr('disabled', true).prop('disabled', true);
             this.element.addClass(this.options.submitClass);
-            this.element.trigger('formAjax._beforeSubmit', arr);
+            this.element.trigger('formAjax.beforeSubmit', arr);
         },
 
         _successSubmit: function (response, statusText, xhr, $form) {
