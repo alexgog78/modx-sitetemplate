@@ -1,17 +1,17 @@
 @each $value in $text-decoration {
-    %text-decoration--#{$value} {
+    %text-decoration__#{$value} {
         text-decoration: $value;
     }
 }
 @each $breakpoints, $width in $breakpoints {
     @each $value in $text-decoration {
-        %text-decoration__#{$breakpoints}-max--#{$value} {
+        %text-decoration__#{$value}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 text-decoration: $value;
             }
         }
 
-        %text-decoration__#{$breakpoints}-min--#{$value} {
+        %text-decoration__#{$value}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 text-decoration: $value;
             }

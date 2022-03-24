@@ -1,17 +1,17 @@
 @each $key, $value in $colors {
-    %background-color--#{$key} {
+    %background-color__#{$key} {
         background-color: $value;
     }
 }
 @each $breakpoints, $width in $breakpoints {
     @each $key, $value in $colors {
-        %background-color__#{$breakpoints}-max--#{$key} {
+        %background-color__#{$key}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 background-color: $value;
             }
         }
 
-        %background-color__#{$breakpoints}-min--#{$key} {
+        %background-color__#{$key}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 background-color: $value;
             }

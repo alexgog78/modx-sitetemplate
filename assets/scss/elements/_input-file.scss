@@ -1,7 +1,7 @@
 %input-file {
-    @extend %position--relative;
-    @extend %display--inline-flex;
-    @extend %cursor--pointer;
+    @extend %position__relative;
+    @extend %display__inline-flex;
+    @extend %cursor__pointer;
     width: 100%;
     height: 3rem;
 
@@ -19,8 +19,8 @@
     }
 
     input[type="file"] {
-        @extend %position--absolute;
-        @extend %cursor--pointer;
+        @extend %position__absolute;
+        @extend %cursor__pointer;
         z-index: 1;
         top: 0;
         right: 0;

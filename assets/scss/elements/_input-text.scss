@@ -1,13 +1,13 @@
 %input-text {
-    @extend %border--black;
-    @include transition--color;
+    @extend %border__black;
+    @include transition__color;
     height: 3rem;
     width: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
 
     &::placeholder {
-        @extend %color--black;
+        @extend %color__black;
         line-height: normal;
     }
 
@@ -20,13 +20,13 @@
         border-color: map-get($colors, 'error');
 
         &::placeholder {
-            @extend %color--error;
+            @extend %color__error;
         }
     }
 
     + em.error {
-        @extend %display--inline-block;
-        @extend %color--error;
+        @extend %display__inline-block;
+        @extend %color__error;
         margin-top: .25rem;
     }
 }

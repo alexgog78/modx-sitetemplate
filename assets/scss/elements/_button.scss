@@ -1,6 +1,6 @@
 %button {
-    @extend %display--inline-flex;
-    @extend %border--transparent;
+    @extend %display__inline-flex;
+    @extend %border__transparent;
     @include transition--color;
     align-items: center;
     justify-content: center;

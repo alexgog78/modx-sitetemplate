@@ -1,17 +1,17 @@
 @each $key, $value in $font-weights {
-    %font-weight--#{$key} {
+    %font-weight__#{$key} {
         font-weight: $value;
     }
 }
 @each $breakpoints, $width in $breakpoints {
     @each $key, $value in $font-weights {
-        %font-weight__#{$breakpoints}-max--#{$key} {
+        %font-weight__#{$key}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 font-weight: $value;
             }
         }
 
-        %font-weight__#{$breakpoints}-min--#{$key} {
+        %font-weight__#{$key}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 font-weight: $value;
             }

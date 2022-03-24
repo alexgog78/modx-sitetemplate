@@ -1,17 +1,17 @@
 %input-checkbox {
-    @extend %display--inline-flex;
-    @extend %cursor--pointer;
+    @extend %display__inline-flex;
+    @extend %cursor__pointer;
     align-items: center;
 
     &.disabled {
-        @extend %cursor--not-allowed;
+        @extend %cursor__not-allowed;
         opacity: .5;
     }
 
     i {
         @include transition--color;
-        @extend %display--inline-flex;
-        @extend %border--black;
+        @extend %display__inline-flex;
+        @extend %border__black;
         flex-shrink: 0;
         align-items: center;
         justify-content: center;
@@ -20,7 +20,7 @@
         margin-right: .5rem;
 
         &::after {
-            @extend %background-color--black;
+            @extend %background-color__black;
             content: "";
             width: .75rem;
             height: .75rem;
@@ -29,7 +29,7 @@
     }
 
     input {
-        @extend %display--none;
+        @extend %display__none;
     }
 
     &:hover i,

@@ -1,6 +1,6 @@
 .page {
-    @extend %font-weight--#{$default__font-weight};
-    @extend %color--#{$default__color};
+    @extend %font-weight__#{$default__font-weight};
+    @extend %color__#{$default__color};
     font-family: map-get($font-families, $default__font-family), sans-serif;
     font-size: 1.3vw;
     letter-spacing: $default__letter-spacing;
@@ -14,11 +14,7 @@
     }
 
     .js-loading {
-        @extend %background-color--grey;
-
-        > * {
-            opacity: 0;
-        }
+        opacity: .8;
     }
 
     @import "page__body";

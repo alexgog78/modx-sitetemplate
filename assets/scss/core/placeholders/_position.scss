@@ -1,17 +1,17 @@
 @each $value in $position {
-    %position--#{$value} {
+    %position__#{$value} {
         position: $value;
     }
 }
 @each $breakpoints, $width in $breakpoints {
     @each $value in $position {
-        %position__#{$breakpoints}-max--#{$value} {
+        %position__#{$value}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 position: $value;
             }
         }
 
-        %position__#{$breakpoints}-min--#{$value} {
+        %position__#{$value}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 position: $value;
             }

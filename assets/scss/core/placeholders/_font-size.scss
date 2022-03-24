@@ -1,17 +1,17 @@
 @each $key, $value in $font-sizes {
-    %font-size--#{$key} {
+    %font-size__#{$key} {
         font-size: $value;
     }
 }
 @each $breakpoints, $width in $breakpoints {
     @each $key, $value in $font-sizes {
-        %font-size__#{$breakpoints}-max--#{$key} {
+        %font-size__#{$key}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 font-size: $value;
             }
         }
 
-        %font-size__#{$breakpoints}-min--#{$key} {
+        %font-size__#{$key}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 font-size: $value;
             }

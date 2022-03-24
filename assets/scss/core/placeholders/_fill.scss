@@ -1,17 +1,17 @@
 @each $key, $value in $colors {
-    %fill--#{$key} {
+    %fill__#{$key} {
         fill: $value;
     }
 }
 @each $breakpoints, $width in $breakpoints {
     @each $key, $value in $colors {
-        %fill__#{$breakpoints}-max--#{$key} {
+        %fill__#{$key}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 fill: $value;
             }
         }
 
-        %fill__#{$breakpoints}-min--#{$key} {
+        %fill__#{$key}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 fill: $value;
             }

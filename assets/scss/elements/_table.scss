@@ -4,28 +4,28 @@
 
     thead,
     tfoot {
-        @extend %background-color--grey;
-        @extend %font-weight--bold;
+        @extend %background-color__grey;
+        @extend %font-weight__bold;
     }
 
     tbody {
         tr:nth-child(odd) {
-            @extend %background-color--white;
+            @extend %background-color__white;
         }
 
         tr:nth-child(even) {
-            @extend %background-color--grey;
+            @extend %background-color__grey;
         }
     }
 
     td,
     th {
-        @extend %border--black;
+        @extend %border__black;
         padding: .5rem 1rem;
     }
 
     th {
-        @extend %font-weight--bold;
+        @extend %font-weight__bold;
     }
 }
 

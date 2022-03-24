@@ -1,17 +1,17 @@
 @each $value in $visibility {
-    %visibility--#{$value} {
+    %visibility__#{$value} {
         visibility: $value;
     }
 }
 @each $breakpoints, $width in $breakpoints {
     @each $value in $visibility {
-        %visibility__#{$breakpoints}-max--#{$value} {
+        %visibility__#{$value}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 visibility: $value;
             }
         }
 
-        %visibility__#{$breakpoints}-min--#{$value} {
+        %visibility__#{$value}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 visibility: $value;
             }

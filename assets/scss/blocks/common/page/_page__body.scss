@@ -1,6 +1,6 @@
 &__body {
-    @extend %display--flex;
-    @extend %background-color--#{$body__background};
+    @extend %display__flex;
+    @extend %background-color__#{$body__background};
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;

@@ -1,17 +1,17 @@
 @each $value in $cursor {
-    %cursor--#{$value} {
+    %cursor__#{$value} {
         cursor: $value;
     }
 }
 @each $breakpoints, $width in $breakpoints {
     @each $value in $cursor {
-        %cursor__#{$breakpoints}-max--#{$value} {
+        %cursor__#{$value}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 cursor: $value;
             }
         }
 
-        %cursor__#{$breakpoints}-min--#{$value} {
+        %cursor__#{$value}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 cursor: $value;
             }

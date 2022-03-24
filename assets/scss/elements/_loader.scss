@@ -1,5 +1,5 @@
 .loader {
-    @extend %display--flex;
+    @extend %display__flex;
     z-index: 1000;
     align-items: center;
     justify-content: center;
@@ -12,8 +12,8 @@
     }
 
     &__cube {
-        @extend %float--left;
-        @extend %background-color--#{$link__color};
+        @extend %float__left;
+        @extend %background-color__#{$link__color};
         animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
         width: 33%;
         height: 33%;

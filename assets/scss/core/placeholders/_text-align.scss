@@ -1,17 +1,17 @@
 @each $value in $text-align {
-    %text-align--#{$value} {
+    %text-align__#{$value} {
         text-align: $value;
     }
 }
 @each $breakpoints, $width in $breakpoints {
     @each $value in $text-align {
-        %text-align__#{$breakpoints}-max--#{$value} {
+        %text-align__#{$value}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 text-align: $value;
             }
         }
 
-        %text-align__#{$breakpoints}-min--#{$value} {
+        %text-align__#{$value}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 text-align: $value;
             }

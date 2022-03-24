@@ -1,81 +1,81 @@
 @each $key, $value in $colors {
-    %border--#{$key} {
+    %border__#{$key} {
         border: 1px solid $value;
     }
 
-    %border-top--#{$key} {
+    %border-top__#{$key} {
         border-top: 1px solid $value;
     }
 
-    %border-right--#{$key} {
+    %border-right__#{$key} {
         border-right: 1px solid $value;
     }
 
-    %border-bottom--#{$key} {
+    %border-bottom__#{$key} {
         border-bottom: 1px solid $value;
     }
 
-    %border-left--#{$key} {
+    %border-left__#{$key} {
         border-left: 1px solid $value;
     }
 }
 @each $breakpoints, $width in $breakpoints {
     @each $key, $value in $colors {
-        %border__#{$breakpoints}-max--#{$key} {
+        %border__#{$key}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 border: 1px solid $value;
             }
         }
 
-        %border__#{$breakpoints}-min--#{$key} {
+        %border__#{$key}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 border: 1px solid $value;
             }
         }
 
-        %border-top__#{$breakpoints}-max--#{$key} {
+        %border-top__#{$key}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 border-top: 1px solid $value;
             }
         }
 
-        %border-top__#{$breakpoints}-min--#{$key} {
+        %border-top__#{$key}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 border-top: 1px solid $value;
             }
         }
 
-        %border-right__#{$breakpoints}-max--#{$key} {
+        %border-right__#{$key}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 border-right: 1px solid $value;
             }
         }
 
-        %border-right__#{$breakpoints}-min--#{$key} {
+        %border-right__#{$key}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 border-right: 1px solid $value;
             }
         }
 
-        %border-bottom__#{$breakpoints}-max--#{$key} {
+        %border-bottom__#{$key}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 border-bottom: 1px solid $value;
             }
         }
 
-        %border-bottom__#{$breakpoints}-min--#{$key} {
+        %border-bottom__#{$key}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 border-bottom: 1px solid $value;
             }
         }
 
-        %border-left__#{$breakpoints}-max--#{$key} {
+        %border-left__#{$key}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 border-left: 1px solid $value;
             }
         }
 
-        %border-left__#{$breakpoints}-min--#{$key} {
+        %border-left__#{$key}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 border-left: 1px solid $value;
             }

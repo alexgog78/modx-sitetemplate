@@ -1,9 +1,9 @@
 %link {
-    @extend %color--#{$link__color};
+    @extend %color__#{$link__color};
     @include transition--color;
 
     &:hover {
-        @extend %color--#{$link__color--active};
+        @extend %color__#{$link__color--active};
     }
 
     &:hover img {

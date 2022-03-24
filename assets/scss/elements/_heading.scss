@@ -1,13 +1,13 @@
 %heading {
-    @extend %display--block;
-    @extend %position--relative;
-    @extend %font-weight--bold;
+    @extend %display__block;
+    @extend %position__relative;
+    @extend %font-weight__bold;
     line-height: 1.2em;
 }
 
 @each $heading, $font-size in $heading__font-sizes {
     %heading--#{$heading} {
-        @extend %font-size--#{$font-size};
+        @extend %font-size__#{$font-size};
     }
 }
 

@@ -1,6 +1,6 @@
 .page-debug {
-    @extend %position--fixed;
-    @extend %cursor--help;
+    @extend %position__fixed;
+    @extend %cursor__help;
     @include transition--all;
     z-index: 980;
     bottom: 0; left: 0;

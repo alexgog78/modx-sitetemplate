@@ -1,17 +1,17 @@
 @each $value in $float {
-    %float--#{$value} {
+    %float__#{$value} {
         float: $value;
     }
 }
 @each $breakpoints, $width in $breakpoints {
     @each $value in $float {
-        %float__#{$breakpoints}-max--#{$value} {
+        %float__#{$value}--#{$breakpoints}-max {
             @include media-breakpoint($breakpoints, max) {
                 float: $value;
             }
         }
 
-        %float__#{$breakpoints}-min--#{$value} {
+        %float__#{$value}--#{$breakpoints}-min {
             @include media-breakpoint($breakpoints, min) {
                 float: $value;
             }
