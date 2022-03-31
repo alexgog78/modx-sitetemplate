@@ -2,7 +2,7 @@
 @import 'placeholders/position';
 
 .row {
-    @extend %display--flex;
+    @extend %display__flex;
     flex-wrap: wrap;
     margin-right: ($grid-gap / -2);
     margin-left: ($grid-gap / -2);
@@ -20,7 +20,7 @@
 }
 
 %grid-column {
-    @extend %position--relative;
+    @extend %position__relative;
     width: 100%;
     padding-right: ($grid-gap / 2);
     padding-left: ($grid-gap / 2);
