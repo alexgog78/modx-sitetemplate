@@ -2,17 +2,35 @@
     line-height: 1.5em;
     list-style: none;
     counter-reset: li;
+
+    li {
+        margin-bottom: .25rem;
+        padding-left: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 %list--ul {
-    list-style: disc;
-    margin-left: 1rem;
+    li::before {
+        @extend %position__absolute;
+        @extend %background-color__black;
+        content: "";
+        top: .75rem;
+        left: .25rem;
+        width: .25rem;
+        height: .25rem;
+        border-radius: 50%;
+    }
 }
 
 %list--ol {
     li::before {
         counter-increment: li;
-        content: counter(li)'.';
+        content: counter(li) ".";
+        margin-right: .25rem;
     }
 }
 

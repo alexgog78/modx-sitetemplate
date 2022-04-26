@@ -3,19 +3,19 @@
     @extend %display__inline-flex;
     @extend %cursor__pointer;
     width: 100%;
-    height: 3rem;
 
     input[type="text"] {
         @extend %input-text;
         flex-grow: 1;
-        height: 100%;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
 
     button {
         @extend %button;
-        height: 100%;
+        height: auto;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
     }
 
     input[type="file"] {

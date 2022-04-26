@@ -1,6 +1,3 @@
-@import 'placeholders/display';
-@import 'placeholders/position';
-
 .row {
     @extend %display__flex;
     flex-wrap: wrap;
